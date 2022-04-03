@@ -15,6 +15,7 @@
         img {
             display: block;
             margin: 0 auto;
+            /* animation: heartbeat 5s; */
         }
         span {
             color: $main-color;
@@ -28,4 +29,12 @@
         font-weight: 700;
         text-align: center;
     }
+    &__icon {
+        &_animated {
+            animation-name: heartbeat;
+            animation-timing-function: ease;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+    } 
 }
