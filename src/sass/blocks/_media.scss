@@ -14,6 +14,129 @@
 
 }
 @media (max-width: 575px){
-    
+    .container {
+        width: 100%;
+    }
+    .promo{
+        min-height: 460px;
+        padding: 21px 0 40px 0;
+        &__wrapper {
+            margin-top: 40px;
+            align-items: center;
+        }
+        &__header {
+            font-size: 24px;
+            line-height: 24px;
+        }
+        &__subheader {
+            margin-top: 10px;
+            font-size: 13px;
+            line-height: 13px;
+        }
+        &__icons {
+            margin-top: 32px;
+            width: 320px;
+            font-size: 12px;
+        }
+        &__link {
+            font-size: 13px;
+        }
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__logo {
+            width: 145px;
+            margin-right: 5px;
+        }
+        &__official {
+            display: none;
+        }
+        &__contacts {
+            margin-left: 5px;
+            font-size: 14px;
+        }
+        &__phone {
+            font-size: 13px;
+        }
+    }
+    .button {
+        width: 145px;
+        height: 27px;
+        font-size: 10px;
+        &__main {
+            margin-top: 45px;
+            width: 250px;
+            font-size: 14px;
+        }
+        &_submit {
+            height: 35px;
+            font-size: 11px;
+        }
+    }
+
+    .benefits {
+        padding: 35px 0 40px 0;
+        &__wrapper {
+            margin-top: 0px;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__icons {
+            width: 295px;
+            text-align: justify;
+            font-weight: 300;
+            img {
+                margin-top: 16px;
+            }
+        }
+        &__subheader {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+    .title {
+        font-size: 24px;
+        &_left {
+            display: block;
+            margin: 0 auto;
+            width: 295px;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+    }
+    .consultation {
+        min-height: 485px;
+        padding: 45px 0 45px 0;
+        &__descr {
+            padding: 20px 10px 0 10px;
+            font-size: 16px;
+            font-weight: 300;
+            margin: 0 auto;
+            width: 295px;
+            text-align: left;
+        }
+    }
+    .feed-form {
+        margin-top: 25px;
+        justify-content: center;
+        align-items: center;
+        width: 574px;
+        input {
+            width: 250px;
+            height: 40px;
+            margin-bottom: 13px;
+            font-weight: 300;
+            font-size: 12px;
+            &:nth-child(3) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
 }
-	
