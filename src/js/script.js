@@ -126,6 +126,134 @@ $(document).ready(function(){
     });
 
     new WOW().init();
-}); 
+
+      // Timer
+
+    const deadline = '2022-07-05';
+
+    function getTimeRemaning(endtime) {
+        const t = Date.parse(endtime) - Date.parse(new Date()); // с помощью метода Date.parse превращаем дату в виде строки в число. Тут получаем количество милисекунд- время до которого нам надо досчитать 
+        const days = Math.floor(t / (1000 * 60 * 60 * 24));
+        const hours =  Math.floor((t / (1000 * 60 * 60) % 24));
+        const minutes =  Math.floor((t / 1000 / 60) % 24);
+        const seconds =  Math.floor(t / 1000 % 60);
+
+        return {
+            'total': t, // свойство 'total' показывает общее количество милисекунд
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds,
+        }
+    }
+
+    function getZero(num) {
+        if (num >= 0 && num < 10) {
+            return `0${num}`;
+        }
+        else {
+            return num;
+        }
+    }
+
+    function setClock(selector, endtime) {
+        const timer = document.querySelector(selector);
+        const days = timer.querySelector('#days');
+        const hours = timer.querySelector('#hours');
+        const minutes = timer.querySelector('#minutes');
+        const seconds = timer.querySelector('#seconds');
+        const timeInterval = setInterval(updateClock, 1000);
+
+        updateClock();
+
+        function updateClock() {
+            const t = getTimeRemaning(endtime);
+
+            days.innerHTML = getZero(t.days);
+            hours.innerHTML = getZero(t.hours);
+            minutes.innerHTML = getZero(t.minutes);
+            seconds.innerHTML = getZero(t.seconds);
+
+            if (t.total <= 0) {
+                clearInterval(timeInterval);
+            }
+        }
+    }
+
+    setClock('.timer', deadline);
+
+    class MenuCard {
+        constructor (src, alt, subtitle, descr, oldprice, price, parentSelector) {
+            this.src = src;
+            this.alt = alt;
+            this.subtitle = subtitle;
+            this.descr = descr;
+            this.oldprice = oldprice;
+            this.price = price;
+            this.parent = document.querySelector(parentSelector);
+        }
+            
+        render () {
+            const element = document.createElement('div');
+            element.innerHTML = `
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src=${this.src}" alt=${this.alt} class="catalog-item__img">
+                            <div class="catalog-item__subtitle">${this.subtitle}</div>
+                            <div class="catalog-item__descr">${this.descr}</div>
+                            <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                        </div>
+                        <div class="catalog-item__list">
+                            <ul>
+                                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                            </ul>
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">${this.oldprice} руб.</div>
+                            <div class="catalog-item__price">${this.price} руб.</div>
+                        </div>
+                        <button class="button button_mini">КУПИТЬ</button>
+                    </div>
+                </div>
+            `;
+
+            this.parent.append(element);
+        }
+
+    }
+
+    new MenuCard(
+        "img/catalogue_model.jpg",
+        "catalog",
+        "Пульсометр Polar FT1",
+        "Для первых шагов в тренировках, основанных на сердечном ритме",
+        4750,
+        4500,
+        ".catalog .catalog__content_two",
+    ).render();
+
+    new MenuCard(
+        "img/bg_shoes.jpg",
+        "catalog",
+        "Пульсометр Polar FT1",
+        "Для первых шагов в тренировках, основанных на сердечном ритме",
+        4750,
+        4500,
+        ".catalog .catalog__content_two",
+    ).render();
+
+    
 
 
+});
+
+  
