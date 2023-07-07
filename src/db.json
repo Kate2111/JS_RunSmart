@@ -1,0 +1,166 @@
+{
+    "catalog": [
+        {
+            "category": "fitness",
+            "info": [
+                {
+                    "subtitle": "Часы для фитнеса olar Unite",
+                    "oldprice": "13 990 ",
+                    "price": "10 990 ",
+                    "detail": [
+                        "Сверхлегкий и изящный дизайн оптимизирован для круглосуточного использования.", 
+                        "Автоматический журнал тренировок, хранилище данных о вашем сне и активности.", 
+                        "Вы сможете отслеживать свой прогресс тренировок.", 
+                        "Отслеживание частоты пульса - основа для улучшения вашей физической формы."
+                    ],
+                    "carusel": [
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_1.1.png?alt=media&token=cc9ea90d-9a2e-4c42-82ee-db1e874d725f",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_1.1.png?alt=media&token=cc9ea90d-9a2e-4c42-82ee-db1e874d725f",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_1.2.png?alt=media&token=d2bf37d6-89ec-4448-807e-0391efd609d1"
+                    ]
+                }, 
+                {
+                    "subtitle": "Часы для фитнеса с интеллектуальными функциями olar Ignite 2",
+                    "oldprice": "21 990 ",
+                    "price": "16 990 ",
+                    "detail": [
+                        "Цветной сенсорный экран и 1-кнопочный интерфейс", 
+                        "Персональных рекомендаций по тренировкам, сну и восстановлению.", 
+                        "Сохраняйте мотивацию и добивайтесь поставленных целей.", 
+                        "Сравнивайте свою историю тренировок и отслеживать свой прогресс."
+                    ],
+                    "carusel": [
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_2.png?alt=media&token=2ae12853-9b09-4be7-b0c7-9957f5d8d39c",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_2.1.png?alt=media&token=2f08b7f9-146e-459b-982d-c773cfb2e01a",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_2.2.png?alt=media&token=1282a625-c779-4ede-b82a-2bda84c7a8d1"
+                    ]
+                },
+                {
+                    "subtitle": "Часы для фитнеса с интеллектуальными функциями olar Ignite 2 с дополнительным ремешком",
+                    "oldprice": "33 898 ",
+                    "price": "16 990 ",
+                    "detail": [
+                        "Новейшие интеллектуальные функции и красивый дизайн.", 
+                        "Часы olar Ignite 2 просты в использовании.", 
+                        "Используйте управление музыкой, прогноз погоды, источники энергии и ush-уведомления.", 
+                        "Создайте баланс между вашими фитнес-целями и повседневной жизнью с помощью персональных рекомендаций."
+                    ],
+                    "carusel": [
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_3.png?alt=media&token=de523da6-a0ae-4896-a9c1-e77f559a4b98",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_3.2.png?alt=media&token=f4d9a15d-4b3d-4408-8e89-f8f1198dbd76",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_3.3.jpeg?alt=media&token=f4db450f-4cb9-41dc-8535-af7f930fa1c3"
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "run",
+            "info": [
+                {
+                    "subtitle": "Профессиональные часы премиум-класса для мультиспорта olar Vantage V2 с беговым поясом",
+                    "oldprice": "71 500 ",
+                    "price": "35 990 ",
+                    "detail": [
+                        "Сообщает вам, готово ли ваше тело к тренировке.", 
+                        "С легкостью перемещайтесь по списку воспроизведения и регулируйте громкость.", 
+                        "Показывает насколько хорошо вы восстанавливаетесь после дневных нагрузок ночью.", 
+                        "Пошаговые инструкции позаботятся о навигации за вас."
+                    ],
+                    "carusel": [
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_1.jpg?alt=media&token=5b064701-4a36-4222-90e9-3e3ad2165a3f",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_1.2.png?alt=media&token=6b9a7c31-7239-44b4-9824-53673154374b",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_1.3.jpg?alt=media&token=0cb8c70d-d574-464b-a141-4dd22457dffc"
+                    ]
+                }, 
+                {
+                    "subtitle": "Часы премиум-класса для спорта на открытом воздухе olar Grit X ro",
+                    "oldprice": "52 990P",
+                    "price": "39 990 ",
+                    "detail": [
+                        "Сверхдлительное время работы от аккумулятора - до 7 дней.", 
+                        "При поддержке Komoot - синхронизируйте маршруты с часами для получения пошаговых инструкций в режиме реального времени.", 
+                        "Обратный путь - поможет вернуться к начальной точке.", 
+                        "Профили высот и маршрута - просматривайте углы наклона и профили высот для каждого подъема и спуска на своем маршруте."
+                    ],
+                    "carusel": [
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_2.jpg?alt=media&token=89969179-5656-4ac0-989c-cc9176d88f49",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_2.1.jpg?alt=media&token=14b672c9-6273-4aad-95f9-03de86b1827a",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_2.2.jpg?alt=media&token=5e900495-30b3-4e2e-9afe-6675d2af1e85"
+                    ]
+                },
+                {
+                    "subtitle": "Профессиональные часы премиум-класса для мультиспорта olar Vantage V2 с нагрудным датчиком пульса H10",
+                    "oldprice": "45 990 ",
+                    "price": "43 990 ",
+                    "detail": [
+                        "Cycling erformance Test - Велосипедный тест производительности.", 
+                        "Помогает вам увидеть, как во время тренировок нагружаются различные части вашего тела.", 
+                        "Сообщает вам, готово ли ваше тело к тренировке, и предлагает обратную связь по восстановлению прямо на ваших часах.", 
+                        "Показывает, насколько хорошо вы восстанавливаетесь после дневных нагрузок ночью."
+                    ],
+                    "carusel": [
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_3.jpg?alt=media&token=942af903-41ad-4ae6-84c0-1de3b0e3b524",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_3.1.jpg?alt=media&token=3daa87c2-568b-4f1d-a055-145d6b0a3fd6",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_3.2.jpg?alt=media&token=f5836bcc-6a32-4e1b-b74c-a7e854926a98"
+                    ]
+                }
+            ]
+        }, 
+        {
+            "category": "triatlon",
+            "info": [
+                {
+                    "subtitle": "Профессиональные часы премиум-класса для мультиспорта olar Vantage V2",
+                    "oldprice": "39 990 ",
+                    "price": "35 690 ",
+                    "detail": [
+                        "Ваши данные о тренировках доступны на одной платформе в любое время и в любом месте.", 
+                        "Благодаря обширным инструментам планирования и анализа тренировок, поможет вам достичь всех ваших тренировочных целей", 
+                        "Синхронизиронизация все данные о тренировках с другими приложениями", 
+                        "Измерение восстановления Nightly Recharge ™ показывает, насколько хорошо вы восстанавливаетесь после дневных нагрузок ночью."
+                    ],
+                    "carusel": [
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_2.jpg?alt=media&token=bd265969-47d1-4938-9b75-e5c73c65536d",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_1.1.png?alt=media&token=5995bc91-508c-4598-b0d8-9556a1c7722a",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_1.2.jpg?alt=media&token=d89f838a-babe-47b5-a9c4-9b573cc8a3f1"
+                    ]
+                }, 
+                {
+                    "subtitle": "Профессиональные часы премиум-класса для мультиспорта olar Vantage V2 Shift Edition",
+                    "oldprice": "73 590 ",
+                    "price": "54 550 ",
+                    "detail": [
+                        "Вместе с часами поставляется 2 ремешка. Один браслет на часах и один дополнительный.", 
+                        "Вы сможете легко менять и выбирать любой стандартный браслет для ваших часов.", 
+                        "Браслет из перфорированной кожи — стильное решение для любой ситуации.", 
+                        "Браслет из фторкаучука — отличное решение для любых погодных условий."
+                    ],
+                    "carusel": [
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_4.jpg?alt=media&token=8ab8390f-cb30-462e-908d-1c8985497dff",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_4.1.jpg?alt=media&token=42de6204-03d2-428c-aef1-1a5f40e1ab4f",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_4.3.png?alt=media&token=f9c5909e-cb78-4ec2-93d9-894115f885b1"
+                    ]
+                },
+                {
+                    "subtitle": "Профессиональные часы премиум-класса для мультиспорта olar Vantage V2 с нагрудным датчиком пульса H10",
+                    "oldprice": "45 990 ",
+                    "price": "43 990 ",
+                    "detail": [
+                        "Cycling erformance Test - Велосипедный тест производительности.", 
+                        "Помогает вам увидеть, как во время тренировок нагружаются различные части вашего тела.", 
+                        "Сообщает вам, готово ли ваше тело к тренировке, и предлагает обратную связь по восстановлению прямо на ваших часах.", 
+                        "Показывает, насколько хорошо вы восстанавливаетесь после дневных нагрузок ночью."
+                    ],
+                    "carusel": [
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_5.jpg?alt=media&token=1e892a03-9565-4b9b-86a8-81a79bd71b30",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_5.1.jpg?alt=media&token=e9dbb435-23a6-4c23-9535-6b6956969f81",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_5.2.jpg?alt=media&token=892c0620-475d-4f42-a456-ad85916c6bf2"
+                    ]
+                }
+            ]
+        }   
+    ],
+    "reviews": [
+
+    ]
+}

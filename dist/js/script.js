@@ -13,15 +13,18 @@ Undefined - существует, но не имеет никакого знач
 Symbol -  */
 
 $(document).ready(function(){
+    //slider
     $('.carousel__inner').slick({
-        speed: 1200,
+        speed: 500,
+        infinite: true,
+        variableWidth: true,
         prevArrow: '<button type="button" class="slick-prev"><img src="img/left.png"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="img/right.png"></button>',
         responsive: [
                 {
-                        breakpoint: 992,
+                        breakpoint: 300,
                         settings: {
-                                speed: 1200,
+                                speed: 500,
                                 dots: true,
                                 arrows: false
                         }
@@ -29,6 +32,7 @@ $(document).ready(function(){
         ]
     });
 
+    //tabs
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
         $(this)
           .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
@@ -129,57 +133,56 @@ $(document).ready(function(){
 
       // Timer
 
-    const deadline = '2022-07-05';
+    const deadline = '2023-09-01';
 
     function getTimeRemaning(endtime) {
-        const t = Date.parse(endtime) - Date.parse(new Date()); // с помощью метода Date.parse превращаем дату в виде строки в число. Тут получаем количество милисекунд- время до которого нам надо досчитать 
+        const t = Date.parse(endtime) - Date.parse(new Date());
         const days = Math.floor(t / (1000 * 60 * 60 * 24));
-        const hours =  Math.floor((t / (1000 * 60 * 60) % 24));
-        const minutes =  Math.floor((t / 1000 / 60) % 24);
-        const seconds =  Math.floor(t / 1000 % 60);
-
+        const hours = Math.floor((t / (1000 * 60 * 60) % 24));
+        const minutes = Math.floor((t / 1000 / 60) % 24);
+        const seconds = Math.floor(t / 1000 % 60);
+    
         return {
-            'total': t, // свойство 'total' показывает общее количество милисекунд
+            'total': t,
             'days': days,
             'hours': hours,
             'minutes': minutes,
             'seconds': seconds,
-        }
+        };
     }
-
+    
     function getZero(num) {
         if (num >= 0 && num < 10) {
             return `0${num}`;
-        }
-        else {
+        } else {
             return num;
         }
     }
-
+    
     function setClock(selector, endtime) {
-        const timer = document.querySelector(selector);
-        const days = timer.querySelector('#days');
-        const hours = timer.querySelector('#hours');
-        const minutes = timer.querySelector('#minutes');
-        const seconds = timer.querySelector('#seconds');
+        const timer = $(selector);
+        const days = timer.find('#days');
+        const hours = timer.find('#hours');
+        const minutes = timer.find('#minutes');
+        const seconds = timer.find('#seconds');
         const timeInterval = setInterval(updateClock, 1000);
-
+    
         updateClock();
-
+    
         function updateClock() {
             const t = getTimeRemaning(endtime);
-
-            days.innerHTML = getZero(t.days);
-            hours.innerHTML = getZero(t.hours);
-            minutes.innerHTML = getZero(t.minutes);
-            seconds.innerHTML = getZero(t.seconds);
-
+    
+            days.text(getZero(t.days));
+            hours.text(getZero(t.hours));
+            minutes.text(getZero(t.minutes));
+            seconds.text(getZero(t.seconds));
+    
             if (t.total <= 0) {
                 clearInterval(timeInterval);
             }
         }
     }
-
+    
     setClock('.timer', deadline);
 
     class MenuCard {

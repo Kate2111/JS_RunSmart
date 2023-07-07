@@ -1,26 +1,39 @@
 {
-  "name": "3_uber",
+  "name": "run_smart",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://kate2111.github.io/Progect3_RunSmart",
+  "homepage": "https://kate2111.github.io/Progect3_RunSmart", 
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.27.7",
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "browser-sync": "^2.27.10",
+    "core-js": "^3.26.0",
     "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
-    "gulp-cli": "^2.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-rename": "^2.0.0",
+    "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.49.9"
+    "json-server": "^0.17.0",
+    "sass": "^1.52.2",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "es6-promise": "^4.2.8",
+    "firebase": "^9.22.2",
+    "mongodb": "^5.6.0",
+    "nanoid": "^4.0.2",
+    "nodelist-foreach-polyfill": "^1.2.0"
   }
 }

@@ -1,5 +1,5 @@
 .catalog {
-    padding-bottom: 103px;
+    padding: 103px;
     &__tabs {
         margin-top: 70px;
         list-style-type: none;
@@ -50,11 +50,14 @@
 
     &-item {
         width: 300px;
-        min-height: 440px;
+        /* min-height: 440px; */
         border: solid 2px #e8e8e8;
         padding: 20px 20px 26px 20px;
         overflow: hidden;
         margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         &__img {
             display: block;
             margin: 0 auto;
@@ -110,11 +113,15 @@
         &__wrapper {
             display: flex;
             width: calc(200% + 40px);
+            height: 400px;
         }
         &__content {
             width: 50%;
             margin-right: 0px;
             transform: translateX(-100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             &_active {
                 transform: translateX(0%);
                 margin-right: 20px;
