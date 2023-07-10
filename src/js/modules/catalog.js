@@ -85,7 +85,6 @@ async function cards(category, selector) {
         const data = await getResource("catalog");
         if (data && Array.isArray(data)) {
           const categoryData = data.find((item) => item.category === category);
-          console.log(categoryData);
           if (categoryData && Array.isArray(categoryData.info)) {
             const promises = categoryData.info.map(
               async ({ carusel, detail, price, oldprice, subtitle }) => {

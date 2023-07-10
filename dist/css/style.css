@@ -4707,6 +4707,9 @@ progress {
   color: #c70101;
 }
 
+.reviews {
+  padding-bottom: 100px;
+}
 .reviews__items {
   display: flex;
   flex-wrap: wrap;
@@ -4719,7 +4722,7 @@ progress {
   align-items: flex-start;
   margin-bottom: 100px;
 }
-.reviews-item:nth-child(3) {
+.reviews-item:last-child() {
   margin-bottom: 0;
 }
 .reviews-item__img {
@@ -4752,6 +4755,12 @@ progress {
   text-align: left;
   color: #0d0d0d;
   line-height: 19px;
+}
+.reviews__new-review {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer {
@@ -4811,6 +4820,11 @@ progress {
   width: 100%;
   height: 630;
   border: 0;
+}
+
+#map {
+  height: 630px;
+  width: 100%;
 }
 
 .overlay {

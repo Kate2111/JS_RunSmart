@@ -1,6 +1,6 @@
-import { nanoid } from 'nanoid';
+
 import { initializeApp } from "firebase/app";
-import { getDatabase, get, set, remove, ref, child } from "firebase/database";
+import { getDatabase, get, set, push, remove, ref, child } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBvcuoqy4RCoFJswxl2wyQsKFgAHmYZaH0",
@@ -40,10 +40,11 @@ function getResource(recourse) {
 
 
 function postData(data) {
-  const enterId = nanoid(5);
-  const recourseRef = ref(db, "Users/" + enterId);
+  
+  const recourseRef = ref(db, "reviews");
   return new Promise((resolve, reject) => {
-    set(recourseRef,data)
+    const newElem = push(recourseRef);
+    set(newElem,data)
     .then(() => {
       resolve(data);
     })

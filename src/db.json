@@ -14,7 +14,7 @@
                         "Отслеживание частоты пульса - основа для улучшения вашей физической формы."
                     ],
                     "carusel": [
-                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_1.1.png?alt=media&token=cc9ea90d-9a2e-4c42-82ee-db1e874d725f",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_1.png?alt=media&token=373de38c-1807-4b60-8e45-4d37df519c29",
                         "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_1.1.png?alt=media&token=cc9ea90d-9a2e-4c42-82ee-db1e874d725f",
                         "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/fitness%2Fimg_1.2.png?alt=media&token=d2bf37d6-89ec-4448-807e-0391efd609d1"
                     ]
@@ -67,9 +67,9 @@
                         "Пошаговые инструкции позаботятся о навигации за вас."
                     ],
                     "carusel": [
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_1.3.jpg?alt=media&token=0cb8c70d-d574-464b-a141-4dd22457dffc",
                         "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_1.jpg?alt=media&token=5b064701-4a36-4222-90e9-3e3ad2165a3f",
-                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_1.2.png?alt=media&token=6b9a7c31-7239-44b4-9824-53673154374b",
-                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_1.3.jpg?alt=media&token=0cb8c70d-d574-464b-a141-4dd22457dffc"
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/run%2Fimg_1.2.png?alt=media&token=6b9a7c31-7239-44b4-9824-53673154374b"
                     ]
                 }, 
                 {
@@ -120,8 +120,8 @@
                         "Измерение восстановления Nightly Recharge ™ показывает, насколько хорошо вы восстанавливаетесь после дневных нагрузок ночью."
                     ],
                     "carusel": [
-                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_2.jpg?alt=media&token=bd265969-47d1-4938-9b75-e5c73c65536d",
                         "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_1.1.png?alt=media&token=5995bc91-508c-4598-b0d8-9556a1c7722a",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_2.jpg?alt=media&token=bd265969-47d1-4938-9b75-e5c73c65536d",
                         "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_1.2.jpg?alt=media&token=d89f838a-babe-47b5-a9c4-9b573cc8a3f1"
                     ]
                 }, 
@@ -152,15 +152,32 @@
                         "Показывает, насколько хорошо вы восстанавливаетесь после дневных нагрузок ночью."
                     ],
                     "carusel": [
-                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_5.jpg?alt=media&token=1e892a03-9565-4b9b-86a8-81a79bd71b30",
                         "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_5.1.jpg?alt=media&token=e9dbb435-23a6-4c23-9535-6b6956969f81",
+                        "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_5.jpg?alt=media&token=1e892a03-9565-4b9b-86a8-81a79bd71b30",
                         "https://firebasestorage.googleapis.com/v0/b/myrunsmart.appspot.com/o/triatlon%2Fimg_5.2.jpg?alt=media&token=892c0620-475d-4f42-a456-ad85916c6bf2"
                     ]
                 }
             ]
         }   
     ],
-    "reviews": [
-
-    ]
+    "reviews": {
+        "DuSwe": {
+            "photo": "",
+            "name": "Ирина Иванченко",
+            "marathon": "2 полумарафона",
+            "text": "Не знала, что себе купить - обратилась к ребятам из RunSmart - подобрали пульсометр, который подошёл именно под мои цели и финансовые возможности.Через некоторое время решила обновить гаджет - не раздумывая обратилась туда же. Новые цели - новый гаджет! Спасибо, RunSmart!"
+        },
+        "xyrAw": {
+            "photo": "",
+            "name": "Иван Сёмочкин",
+            "marathon": "1 полумарафона",
+            "text": "Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал. Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план тренировок на месяц вперёд. С ними подготовился к своему первому полумарафону! Спасибо!!!"
+        },
+        "gjS5F": {
+            "photo": "",
+            "name": "Юлия Дашкина",
+            "marathon": "2 полумарафона",
+            "text": "Долго не могла начать бегать, т.к. до этого несколько раз начинала, но становилось тяжело и я бросала. От друзей услышала о RunSmart и о беге с контролем пульса и решила попробовать. Позвонила, ребята поинтересовались моими целями и подобрали очень интересный вариант со скидкой! Теперь бегаю и наслаждаюсь бегом! Пробежала уже 2 полумарафона и несколько более коротких забегов и не намерена останавливаться! Спасибо!!!"
+        }
+    }
 }
