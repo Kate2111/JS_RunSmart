@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import { getDatabase, get, set, push, remove, ref, child } from "firebase/database";
+import { getDatabase, get, set, push, put, ref, storage } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBvcuoqy4RCoFJswxl2wyQsKFgAHmYZaH0",
@@ -17,6 +17,7 @@ const firebaseConfig = {
 
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getDatabase();
+//const dbStorage = storage();
 
 function getResource(recourse) {
   const recourseRef = ref(db, recourse);
@@ -55,6 +56,13 @@ function postData(data) {
   });
 }
 
+/* function postPhoto() {
+  const recourseRef = ref(dbStorage,'photoUsers');
+  const task = recourseRef.put();
+  
+} */
+
 export {postData};
 export {getResource};
+//export {postPhoto};
 

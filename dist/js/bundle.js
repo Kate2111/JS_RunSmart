@@ -16541,20 +16541,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_object_from_entries_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.object.from-entries.js */ "./node_modules/core-js/modules/es.object.from-entries.js");
-/* harmony import */ var core_js_modules_es_object_from_entries_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_from_entries_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
-/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.promise.js */ "./node_modules/core-js/modules/es.promise.js");
-/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var core_js_modules_es_promise_finally_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.promise.finally.js */ "./node_modules/core-js/modules/es.promise.finally.js");
-/* harmony import */ var core_js_modules_es_promise_finally_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_finally_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./services */ "./src/js/modules/services.js");
-/* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./reviews */ "./src/js/modules/reviews.js");
+/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.promise.js */ "./node_modules/core-js/modules/es.promise.js");
+/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_promise_finally_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.promise.finally.js */ "./node_modules/core-js/modules/es.promise.finally.js");
+/* harmony import */ var core_js_modules_es_promise_finally_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_finally_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./services */ "./src/js/modules/services.js");
+/* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./reviews */ "./src/js/modules/reviews.js");
 
 
 
@@ -16562,32 +16554,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-
-function forms(formSelector) {
+function forms(formSelector, selectorName, selectorMarathon, selectorReview) {
   var forms = document.querySelectorAll(formSelector);
+  var inputName = document.querySelector(selectorName);
+  var inputMarathon = document.querySelector(selectorMarathon);
+  var inputReview = document.querySelector(selectorReview);
+  //const inputPhoto = document.querySelector(selectorPhoto);
+
   forms.forEach(function (item) {
     bindPostData(item);
   });
   function bindPostData(form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-
+      var infoUserReview = {
+        name: inputName,
+        marathon: inputMarathon,
+        text: inputReview
+      };
       //const enterId = nanoid(5);
-      var formData = new FormData(form);
-      var formDataForAuth = Object.fromEntries(formData.entries());
-      var json = JSON.stringify(formDataForAuth);
-      var data = JSON.parse(json);
-      (0,_services__WEBPACK_IMPORTED_MODULE_9__.postData)(data).then(function () {
-        (0,_reviews__WEBPACK_IMPORTED_MODULE_10__["default"])();
-      })["catch"](function () {
-        console.log('отзыв добавлен');
-      })["finally"](function () {
-        form.reset();
-      });
+      /*  const formData = new FormData(form);
+       const formDataForAuth = Object.fromEntries(formData.entries());
+       const json = JSON.stringify(formDataForAuth);
+       const data = JSON.parse(json); */
+
+      if (name !== '' || marathon !== '', text !== '') {
+        (0,_services__WEBPACK_IMPORTED_MODULE_5__.postData)(infoUserReview).then(function () {
+          (0,_reviews__WEBPACK_IMPORTED_MODULE_6__["default"])();
+        })["catch"](function () {
+          console.log('отзыв добавлен');
+        })["finally"](function () {
+          form.reset();
+        });
+      }
     });
   }
 }
@@ -16744,25 +16743,12 @@ function _reviews() {
                 element.classList.add('reviews-item', 'animate__animated', 'animate__fadeInUp', 'wow');
                 element.setAttribute("data-wow-duration", "2s");
                 element.setAttribute("data-wow-delay", "1s");
-                element.innerHTML = "\n                <div class=\"reviews-item__img\">\n                    <img src=\"img/reviews/Irina.png\" alt=".concat(this.name, ">\n                </div>\n                <div class=\"reviews-item__text\">\n                    <div class=\"reviews-item__subtitle\">").concat(this.name, "</div>\n                    <div class=\"reviews-item__minititle\">").concat(this.marathon, "</div>\n                    <div class=\"reviews-item__descr\">\n                        ").concat(this.text, "\n                    </div>\n                </div>\n            ");
+                element.innerHTML = "\n                <div class=\"reviews-item__img\">\n                    <img src=\"img/catalogue_model.jpg\" alt=".concat(this.name, ">\n                </div>\n                <div class=\"reviews-item__text\">\n                    <div class=\"reviews-item__subtitle\">").concat(this.name, "</div>\n                    <div class=\"reviews-item__minititle\">").concat(this.marathon, "</div>\n                    <div class=\"reviews-item__descr\">\n                        ").concat(this.text, "\n                    </div>\n                </div>\n            ");
                 this.parent.append(element);
               }
             }]);
             return Review;
           }();
-          /*  const loadImage = (src) => {
-               return new Promise((resolve, reject) => {
-                 const img = new Image();
-                 img.onload = () => {
-                   resolve();
-                 };
-                 img.onerror = (error) => {
-                   reject(error);
-                 };
-                 img.src = src;
-               });
-             };
-              */
           _context2.prev = 1;
           _context2.next = 4;
           return (0,_services__WEBPACK_IMPORTED_MODULE_32__.getResource)("reviews");
@@ -16875,6 +16861,8 @@ var firebaseConfig = {
 };
 var firebaseApp = (0,firebase_app__WEBPACK_IMPORTED_MODULE_2__.initializeApp)(firebaseConfig);
 var db = (0,firebase_database__WEBPACK_IMPORTED_MODULE_3__.getDatabase)();
+//const dbStorage = storage();
+
 function getResource(recourse) {
   var recourseRef = (0,firebase_database__WEBPACK_IMPORTED_MODULE_3__.ref)(db, recourse);
   return new Promise(function (resolve, reject) {
@@ -16905,7 +16893,15 @@ function postData(data) {
   });
 }
 
+/* function postPhoto() {
+  const recourseRef = ref(dbStorage,'photoUsers');
+  const task = recourseRef.put();
+  
+} */
 
+
+
+//export {postPhoto};
 
 /***/ }),
 
@@ -17044,6 +17040,108 @@ function timer() {
     }
   }
   setClock('.timer', deadline);
+}
+
+/***/ }),
+
+/***/ "./src/js/modules/upload.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/upload.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ upload)
+/* harmony export */ });
+/* harmony import */ var core_js_modules_es_array_is_array_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.is-array.js */ "./node_modules/core-js/modules/es.array.is-array.js");
+/* harmony import */ var core_js_modules_es_array_is_array_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_is_array_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.symbol.description.js */ "./node_modules/core-js/modules/es.symbol.description.js");
+/* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator.js */ "./node_modules/core-js/modules/es.symbol.iterator.js");
+/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.array.from.js */ "./node_modules/core-js/modules/es.array.from.js");
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.array.slice.js */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_es_date_to_string_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/es.date.to-string.js */ "./node_modules/core-js/modules/es.date.to-string.js");
+/* harmony import */ var core_js_modules_es_date_to_string_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_date_to_string_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var firebase_database__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! firebase/database */ "./node_modules/firebase/database/dist/esm/index.esm.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+
+function createElem(className, parent, text) {
+  var _elem$classList;
+  var elem = document.createElement(button);
+  (_elem$classList = elem.classList).add.apply(_elem$classList, _toConsumableArray(className));
+  elem.textContent = text;
+  parent.insertAdjacentElement('afterend', elem);
+  ;
+}
+function upload(selector) {
+  var input = document.querySelector(selector);
+  var button = document.createElement('button');
+  button.classList.add('button', 'button__white');
+  button.textContent = 'Загрузить фото';
+  input.insertAdjacentElement('afterend', button);
+  //createElem(['button', 'button__white'], input, 'Загрузить фото');
+
+  var trigerInput = function trigerInput() {
+    return input.click();
+  };
+  var changeHandler = function changeHandler(event) {
+    if (!event.target.files) {
+      return;
+    }
+    var file = event.target.files[0];
+    console.log(file);
+    var reader = new FileReader();
+    reader.onload = function (event) {
+      console.log(event.target);
+      input.insertAdjacentElement('afterend', "<img src=\"".concat(event.target.result, "\"/>"));
+    };
+    console.log(reader.readAsDataURL(file));
+
+    //reader.readAsDataURL(file);
+  };
+
+  button.addEventListener('click', trigerInput);
+  input.addEventListener('change', changeHandler);
 }
 
 /***/ }),
@@ -22136,31 +22234,6 @@ $({ target: 'Object', stat: true }, {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.object.from-entries.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/core-js/modules/es.object.from-entries.js ***!
-  \****************************************************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
-var iterate = __webpack_require__(/*! ../internals/iterate */ "./node_modules/core-js/internals/iterate.js");
-var createProperty = __webpack_require__(/*! ../internals/create-property */ "./node_modules/core-js/internals/create-property.js");
-
-// `Object.fromEntries` method
-// https://github.com/tc39/proposal-object-from-entries
-$({ target: 'Object', stat: true }, {
-  fromEntries: function fromEntries(iterable) {
-    var obj = {};
-    iterate(iterable, function (k, v) {
-      createProperty(obj, k, v);
-    }, { AS_ENTRIES: true });
-    return obj;
-  }
-});
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/modules/es.object.get-own-property-symbols.js":
 /*!****************************************************************************!*\
   !*** ./node_modules/core-js/modules/es.object.get-own-property-symbols.js ***!
@@ -22211,30 +22284,6 @@ $({ target: 'Object', stat: true, forced: FAILS_ON_PRIMITIVES, sham: !CORRECT_PR
   }
 });
 
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/modules/es.object.keys.js":
-/*!********************************************************!*\
-  !*** ./node_modules/core-js/modules/es.object.keys.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
-var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules/core-js/internals/to-object.js");
-var nativeKeys = __webpack_require__(/*! ../internals/object-keys */ "./node_modules/core-js/internals/object-keys.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
-
-var FAILS_ON_PRIMITIVES = fails(function () { nativeKeys(1); });
-
-// `Object.keys` method
-// https://tc39.es/ecma262/#sec-object.keys
-$({ target: 'Object', stat: true, forced: FAILS_ON_PRIMITIVES }, {
-  keys: function keys(it) {
-    return nativeKeys(toObject(it));
-  }
-});
 
 
 /***/ }),
@@ -25712,6 +25761,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_reviews__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/reviews */ "./src/js/modules/reviews.js");
 /* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js");
 /* harmony import */ var _modules_new_review__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/new_review */ "./src/js/modules/new_review.js");
+/* harmony import */ var _modules_upload__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/upload */ "./src/js/modules/upload.js");
+
 
 
 
@@ -25725,7 +25776,8 @@ $(document).ready(function () {
   (0,_modules_catalog__WEBPACK_IMPORTED_MODULE_0__["default"])('fitness', '#fitness');
   (0,_modules_catalog__WEBPACK_IMPORTED_MODULE_0__["default"])('triatlon', '#triatlon');
   (0,_modules_reviews__WEBPACK_IMPORTED_MODULE_3__["default"])('.reviews__items');
-  (0,_modules_new_review__WEBPACK_IMPORTED_MODULE_5__["default"])('#review-form');
+  (0,_modules_new_review__WEBPACK_IMPORTED_MODULE_5__["default"])('#review-form', '#name', '#marathon', '#text');
+  (0,_modules_upload__WEBPACK_IMPORTED_MODULE_6__["default"])('#file');
   (0,_modules_timer__WEBPACK_IMPORTED_MODULE_4__["default"])();
 });
 })();

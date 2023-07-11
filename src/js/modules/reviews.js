@@ -18,7 +18,7 @@ async function reviews(selector) {
             element.setAttribute("data-wow-delay", "1s");
             element.innerHTML = `
                 <div class="reviews-item__img">
-                    <img src="img/reviews/Irina.png" alt=${this.name}>
+                    <img src="img/catalogue_model.jpg" alt=${this.name}>
                 </div>
                 <div class="reviews-item__text">
                     <div class="reviews-item__subtitle">${this.name}</div>
@@ -33,19 +33,6 @@ async function reviews(selector) {
         }
     }
 
-   /*  const loadImage = (src) => {
-        return new Promise((resolve, reject) => {
-          const img = new Image();
-          img.onload = () => {
-            resolve();
-          };
-          img.onerror = (error) => {
-            reject(error);
-          };
-          img.src = src;
-        });
-      };
-       */
       try {
         const data = await getResource("reviews");
         const arr = Object.entries(data);

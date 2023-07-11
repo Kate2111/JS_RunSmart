@@ -4395,6 +4395,19 @@ progress {
   height: 40px;
   font-size: 14px;
 }
+.button__white {
+  color: #c70101;
+  background-color: #fff;
+  border: 1px solid #c70101;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.button__white :hover {
+  font-size: 13px;
+  font-weight: 700;
+}
 
 .benefits {
   min-height: 470px;
@@ -4490,6 +4503,34 @@ progress {
   margin-bottom: 20px;
 }
 .feed-form_mt25 {
+  margin-top: 25px;
+}
+
+.review-form {
+  margin-top: 36px;
+  display: flex;
+  gap: 50px;
+  width: 500px;
+}
+.review-form input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.658);
+  padding: 0 20px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #4b4b4b;
+}
+.review-form input:nth-child(3) {
+  margin-bottom: 20px;
+}
+.review-form input[type=file] {
+  display: none;
+}
+.review-form_mt25 {
   margin-top: 25px;
 }
 
@@ -4727,7 +4768,10 @@ progress {
 }
 .reviews-item__img {
   width: 180px;
+  height: 180px;
   margin-right: 60px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .reviews-item__img img {
   width: 100%;

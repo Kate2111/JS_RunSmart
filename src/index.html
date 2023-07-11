@@ -155,11 +155,16 @@
             <div class="reviews__items"></div>
             <div class="reviews__new-review">
                 <h3 class="title">Здесь вы можете оставить ваш отзыв</h3>
-                <form id="review-form" class="feed-form" action="#">
-                    <input name="name" placeholder="Ваше имя" type="text">
-                    <input name="marathon" placeholder="Какие марафоны вы прошли" type="text">
-                    <input name="text" placeholder="Ваш отзыв" type="text">
-                    <button class="button button_submit">опубликовать отзыв</button>
+                <form id="review-form" class="review-form" action="#">
+                    <div>
+                        <input class="button button_submit" name="photo" type="file" id="file">
+                    </div>
+                    <div>
+                        <input id="name" placeholder="Ваше имя" type="text">
+                        <input id="marathon" placeholder="Какие марафоны вы прошли" type="text">
+                        <input id="text" placeholder="Ваш отзыв" type="text">
+                        <button class="button button_submit">опубликовать отзыв</button>
+                    </div>
                 </form>
             </div>
         </div>
