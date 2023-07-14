@@ -13,7 +13,7 @@ async function reviews(selector) {
 
         render () {
             const element = document.createElement('div');
-            element.classList.add('reviews-item', 'animate__animated', 'animate__fadeInUp', 'wow');
+            element.classList.add('reviews-item', 'animate__animated', 'animate__fadeInRight', 'wow');
             element.setAttribute("data-wow-duration", "2s");
             element.setAttribute("data-wow-delay", "1s");
             element.innerHTML = `

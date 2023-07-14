@@ -4806,6 +4806,45 @@ progress {
   flex-direction: column;
   align-items: center;
 }
+.reviews__photo {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 1px red solid;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reviews__photo:hover .reviews__photo-remove {
+  opacity: 1;
+}
+.reviews__photo-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.reviews__photo-remove {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  left: 0;
+  color: white;
+  font-size: 17px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.reviews__photo-remove:hover {
+  font-weight: 500;
+}
 
 .footer {
   min-height: 630px;
