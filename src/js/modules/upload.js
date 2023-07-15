@@ -49,6 +49,7 @@ export default function upload(selector, parent) {
 
         button.addEventListener('click', trigerInput);
         input.addEventListener('change', changeHandler);
+        //почему то эта функция не срабатывает после отправки данных на сервер
         newReview.addEventListener('click', removePhotoUser);
     })
 }

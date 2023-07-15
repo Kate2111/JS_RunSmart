@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getDatabase, get, set, push, ref } from "firebase/database";
 import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage"
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyBvcuoqy4RCoFJswxl2wyQsKFgAHmYZaH0",
   authDomain: "myrunsmart.firebaseapp.com",
@@ -59,25 +60,25 @@ function postData(data) {
 }
 
 function postPhoto(image) {
-  console.log(image);
-  const resourceRef = storageRef(dbStorage, `photoUsers/${image.name}`);
-  const file = image;
-  const uploadTask = uploadBytesResumable(resourceRef, file);
+  return new Promise((resolve, reject) => {
+    const resourceRef = storageRef(dbStorage, `photoUsers/${image.name}`);
+    const file = image;
+    const uploadTask = uploadBytesResumable(resourceRef, file);
 
-  uploadTask.on("state_changed", snapshot => {
-    // Обработка состояния загрузки
-    console.log(snapshot);
-  }, error => {
-    // Обработка ошибок загрузки
-    console.error(error);
-  }, () => {
-    // Загрузка завершена
-    uploadTask.snapshot.ref.getDownloadURL().then(url => {
-      console.log(url);
-      // Выполнение дальнейших действий с URL загруженного файла
-    }).catch(error => {
-      console.error(error);
-      // Обработка ошибок получения URL файла
+    uploadTask.on('state_changed', snapshot => {
+      console.log(snapshot);
+    }, error => {
+      console.log(error);
+      reject(error);
+    }, () => {
+      getDownloadURL(resourceRef)
+        .then(url => {
+          resolve(url);
+        })
+        .catch(error => {
+          console.log(error);
+          reject(error);
+        });
     });
   });
 }

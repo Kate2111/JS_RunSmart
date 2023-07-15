@@ -1,6 +1,7 @@
-import {getResource} from './services';
+import {getData} from './local_storage';
 import slider from './slider';
 import tabs from './tabs';
+
 
 
 async function cards(category, selector) {
@@ -81,9 +82,10 @@ async function cards(category, selector) {
         });
       };
       
+      
       try {
-        const data = await getResource("catalog");
-        if (data && Array.isArray(data)) {
+        const data = await getData('catalogData', "catalog");
+    
           const categoryData = data.find((item) => item.category === category);
           if (categoryData && Array.isArray(categoryData.info)) {
             const promises = categoryData.info.map(
@@ -115,12 +117,17 @@ async function cards(category, selector) {
             );
       
             await Promise.all(promises);
-            slider();
             tabs();
+            slider();
+            
+            $('.button_mini').each(function(i) {
+                $(this).on('click', function() {
+                        $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+                        $('.overlay, #order').fadeIn('slow');
+                })
+            });
+           
           }
-        } else {
-          throw new Error("Ошибка при получении данных из базы данных");
-        }
       } catch (error) {
         console.error(error);
       }

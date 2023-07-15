@@ -1,10 +1,11 @@
-import {getResource} from './services';
+import {getData} from './local_storage';
+
 
 async function reviews(selector) {
-    
-     class Review {
-        constructor (name, marathon, text, parentSelector) {
+    class Review {
+        constructor (name, photo, marathon, text, parentSelector) {
             this.name = name;
+            this.photo = photo;
             this.marathon = marathon;
             this.text = text;
             this.parentSelector = parentSelector;
@@ -14,11 +15,10 @@ async function reviews(selector) {
         render () {
             const element = document.createElement('div');
             element.classList.add('reviews-item', 'animate__animated', 'animate__fadeInRight', 'wow');
-            element.setAttribute("data-wow-duration", "2s");
-            element.setAttribute("data-wow-delay", "1s");
+            element.setAttribute("data-wow-duration", "1.5s");
             element.innerHTML = `
                 <div class="reviews-item__img">
-                    <img src="img/catalogue_model.jpg" alt=${this.name}>
+                    <img src=${this.photo} alt=${this.name}>
                 </div>
                 <div class="reviews-item__text">
                     <div class="reviews-item__subtitle">${this.name}</div>
@@ -34,25 +34,23 @@ async function reviews(selector) {
     }
 
       try {
-        const data = await getResource("reviews");
-        const arr = Object.entries(data);
-      
+        const arr = await getData('reviewsData', "reviews");
         const promises = arr.map(
             async ([key, info]) => {
-            const {name, marathon, text} = info;
+            const {name, photo, marathon, text} = info;
+            //тут добавить проверку по key, есть ли отзыв по данному ключу на странице, если нет , то добавляем новый. Скорей всего ключ записывать в дата атрибут
             const review = new Review(
                 name,
+                photo,
                 marathon,
                 text,
                 `${selector}`
             );
-    
             review.render();
-            
             }
         );
-    
         await Promise.all(promises);
+        
       } catch (error) {
         console.error(error);
       }
