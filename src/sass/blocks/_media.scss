@@ -1,13 +1,13 @@
-@media (max-width: 1200px) {
+@media (max-width: 1130px) {
+    .catalog__content {
+        width: 650px;
+        margin: 0 auto;
+    }
 
 }
 @media (max-width: 991px){
     .container {
         max-width: 900px;
-    }
-
-    .promo__wrapper {
-        margin-top: 50px;
     }
 
     .promotion {
@@ -16,12 +16,117 @@
         }
     }
 }
-@media (max-width: 767px){
 
+@media (max-width: 900px){
+    .container {
+        max-width: 750px;
+    }
+    .catalog{
+        &__tabs {
+            padding: 0;
+        }
+        &__tab {
+            width: 100%;
+        }
+        &__content_active {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        &-item {
+            width: 70%;
+            &__wrapper {
+                height: 335px;
+            }
+        }
+    }
+    .carousel .slick-prev {
+        left: -100px;
+    }
+    .carousel .slick-next {
+        right: -100px;
+    }
+    .promotion{
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__descr {
+            text-align: center
+        }
+        &__text {
+            width: 100%;
+        }
+        &__timer {
+            width: 100%;
+            display: flex;
+            margin-top: 45px;
+            flex-direction: column;
+            align-items: center;
+            .timer {
+                gap: 25px;
+            }
+        }
+    }
+    .reviews{
+        &-item {
+            margin-bottom: 50px;
+            &_text {
+                width: 500px;
+            }
+        }
+    }
 }
+
+@media (max-width: 767px){
+    .container {
+        max-width: 680px;
+    }
+    .benefits__icons {
+        width: 200px;
+    }
+    .catalog {
+        padding: 90px 0;
+    }
+    .reviews-item__text {
+        width: 400px;
+    }
+}
+
+
+@media (max-width: 680px){
+    .container {
+        max-width: 560px;
+    }
+    .header__official {
+        display: none;
+    }
+    .catalog__content {
+        width: 545px;
+    }
+    .carousel .slick-prev {
+        left: -66px;
+    }
+    .carousel .slick-next {
+        right: -66px;
+    }
+    .reviews{
+        &-item{
+            &__img {
+                width: 150px;
+                height: 150px;
+                margin-right: 25px;
+            }
+            &__text {
+                width: 370px;
+            }
+        }
+    }
+}
+
 @media (max-width: 575px){
     .container {
-        width: 100%;
+        max-width: 500px;
     }
     .promo{
         min-height: 460px;
@@ -52,13 +157,10 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;;
         &__logo {
             width: 145px;
             margin-right: 5px;
-        }
-        &__official {
-            display: none;
         }
         &__contacts {
             margin-left: 5px;
@@ -75,12 +177,20 @@
         &__main {
             margin-top: 45px;
             width: 250px;
+            height: 50px;
+            line-height: 48px;
             font-size: 14px;
         }
         &_submit {
-            height: 35px;
+            height: 40px;
+            width: 250px;
             font-size: 11px;
         }
+        &__white {
+            width: 145px;
+            height: 145px;
+        }
+
     }
 
     .benefits {
@@ -124,15 +234,15 @@
             font-size: 16px;
             font-weight: 300;
             margin: 0 auto;
-            width: 295px;
-            text-align: left;
+            width: 100%;
+            text-align: center;
         }
     }
     .feed-form {
         margin-top: 25px;
         justify-content: center;
         align-items: center;
-        width: 574px;
+        width: 100%;
         input {
             width: 250px;
             height: 40px;
@@ -144,5 +254,167 @@
             }
         }
     }
+    .catalog{
+        &__content {
+        width: 480px;
+        }
+        &__tab {
+            font-size: 15px;
+        }
+        &-item {
+            width: 100%;
+        }
+    }
+    .promotion__timer .timer__block {
+        width: 95px;
+        height: 95px;
+        span{
+            font-size: 45px;
+        }
+    }
+    .reviews{
+        &__items {
+            margin: 50px 0;
+        }
+        &-item{
+            &__img {
+                width: 100px;
+                height: 100px;
+                margin-right: 20px;
+            }
+            &__text {
+                width: 370px;
+            }
+            &__descr {
+                font-size: 15px;
+            }
+        }
+    }
+}
 
+@media (max-width: 481px){
+    .container {
+        max-width: 370px;
+    }
+    .promo {
+        &__links{
+            width: 370px;
+        }
+        &__link {
+            width: 95px;
+            img{
+                margin-bottom: 15px;
+            }
+        }
+    }    
+    .catalog{
+        &__content {
+            width: 350px;
+        }
+        &__tabs {
+            margin-top: 50px;
+            flex-direction: column;
+            gap: 10px
+        }
+    }
+    .carousel .slick-prev {
+        left: -50px;
+    }
+    .carousel .slick-next {
+        right: -50px;
+    }
+    .promotion {
+        .title {
+            font-size: 24px;
+        }
+        &__timer{
+            .timer {
+                gap: 15px;
+                margin-top: 15px;
+                &__block{
+                    width: 78px;
+                    height: 78px;
+                    span{
+                        font-size: 33px;
+                    }
+                }
+            }
+        } 
+    } 
+    .reviews{
+        &-item {
+            flex-direction: column; 
+            &__img{
+                margin-bottom: 20px;
+            }
+            &_text {
+                width: 360px;
+            }
+        }
+    }  
+    .review-form {
+        margin-top: 20px;
+        gap: 10px;
+        width: 350px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 370px){
+    .container {
+        max-width: 300px;
+    }
+    .header{
+        justify-content: flex-start;
+        &__contacts {
+            display: none;
+        }
+    }
+    .promo {
+        &__links{
+            width: 290px;
+        }
+        &__link {
+            width: 75px;
+            img{
+                margin-bottom: 13px;
+            }
+        }
+    } 
+    .catalog{
+        padding: 70px 0;
+        &__content {
+            width: 300px;   
+        }
+        &__tab {
+            width: 90%;
+        }
+    }
+    .promotion{
+        &__descr {
+            margin-top: 20px;
+            font-size: 17px;
+            span{
+                font-size: 20px;
+            }
+        }
+        .title {
+            font-size: 19px;
+        }
+        &__timer .timer__block {
+            width: 65px;
+            height: 65px;
+            span{
+                font-size: 24px;
+            }
+        }
+    }
+    .reviews-item__text {
+        width: 300px;
+    }
+    .review-form {
+        width: 300px;
+    }
 }
