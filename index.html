@@ -100,7 +100,7 @@
                 <input name="name" placeholder="Ваше имя" type="text">
                 <input name="phone" placeholder="Ваш телефон">
                 <input name="email" placeholder="Ваш E-mail" type="email">
-                <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
+                <button class="button button_submit-consultation">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
     </section>
@@ -117,41 +117,43 @@
             <div id="run" class="catalog__content"></div>
             <div id="triatlon" class="catalog__content"></div>
         </div>
-    </section>
+    </section> 
 
     <section class="promotion">
         <div class="container">
-            <div class="promotion__text">
-                <div class="title wow animate__zoomIn" data-wow-duration="2s">Акция!</div>
-                <div class="promotion__descr wow animate__slideInLeft" data-wow-duration="2s">
-                    Скидка <span>50%!</span> на покупку второго пульсометра! Успей купить!
-                    <br><br>
-                    Акция закончится 1 сентября в 20:00
+            <div class="promotion__wrapper">
+                <div class="promotion__text">
+                    <div class="title wow animate__zoomIn" data-wow-duration="2s">Акция!</div>
+                    <div class="promotion__descr wow animate__slideInLeft" data-wow-duration="2s">
+                        Скидка <span>50%!</span> на покупку второго пульсометра! Успей купить!
+                        <br><br>
+                        Акция закончится 1 сентября в 20:00
+                    </div>
                 </div>
-            </div>
-            <div class="promotion__timer">
-                <div class="title wow animate__zoomIn" data-wow-duration="2s">Осталось до конца акции:</div>
-                <div class="timer">
-                    <div class="timer__block">
-                        <span id="days"></span>
-                        дней
-                    </div>
-                    <div class="timer__block">
-                        <span id="hours"></span>
-                        часов
-                    </div>
-                    <div class="timer__block">
-                        <span id="minutes"></span>
-                        минут
-                    </div>
-                    <div class="timer__block">
-                        <span id="seconds"></span>
-                        секунд
+                <div class="promotion__timer">
+                    <div class="title wow animate__zoomIn" data-wow-duration="2s">Осталось до конца акции:</div>
+                    <div class="timer">
+                        <div class="timer__block">
+                            <span id="days"></span>
+                            дней
+                        </div>
+                        <div class="timer__block">
+                            <span id="hours"></span>
+                            часов
+                        </div>
+                        <div class="timer__block">
+                            <span id="minutes"></span>
+                            минут
+                        </div>
+                        <div class="timer__block">
+                            <span id="seconds"></span>
+                            секунд
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
 
     <section id="reviews" class="reviews">
         <div class="container">
@@ -161,18 +163,18 @@
                 <h3 class="title">Здесь вы можете оставить ваш отзыв</h3>
                 <form id="review-form" class="review-form" action="#">
                     <div>
-                        <input class="button button_submit" name="photo" type="file" id="file">
+                        <input class="button button_submit-review" name="photo" type="file" id="file">
                     </div>
                     <div>
                         <input id="name" placeholder="Ваше имя" type="text">
                         <input id="marathon" placeholder="Какие марафоны вы прошли" type="text">
                         <input id="text" placeholder="Ваш отзыв" type="text">
-                        <button class="button button_submit">опубликовать отзыв</button>
+                        <button class="button button_submit-review">опубликовать отзыв</button>
                     </div>
                 </form>
             </div>
         </div>
-    </section>
+    </section> 
 
     <footer id="footer" class="footer">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.410121151693!2d37.641976588119086!3d55.76874862138736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a63664af129%3A0x32043f062d12723a!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDMg0YHRgtGA0L7QtdC90LjQtSAxLCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTA3MDc4!5e0!3m2!1sru!2sus!4v1688986792981!5m2!1sru!2sus" width="600" height="630" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -196,7 +198,7 @@
                 <input name="name" placeholder="Ваше имя" type="text">
                 <input name="phone" placeholder="Ваш телефон">
                 <input name="email" placeholder="Ваш E-mail" type="email">
-                <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
+                <button class="button button_submit-review">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
 
@@ -208,7 +210,7 @@
                 <input name="name" placeholder="Ваше имя" type="text">
                 <input name="phone" placeholder="Ваш телефон">
                 <input name="email" placeholder="Ваш E-mail" type="email">
-                <button class="button button_submit">Купить</button>
+                <button class="button button_submit-review">Купить</button>
             </form>
         </div>
 
