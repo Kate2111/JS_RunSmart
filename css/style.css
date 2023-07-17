@@ -4656,6 +4656,8 @@ progress {
   color: #c70101;
   text-align: center;
   text-transform: uppercase;
+  background-color: transparent;
+  border: none;
 }
 .catalog-item__link:hover {
   color: #c70101;
@@ -4740,6 +4742,8 @@ progress {
   color: #c70101;
   text-align: center;
   text-transform: uppercase;
+  background-color: transparent;
+  border: none;
 }
 .catalog-item__back:hover {
   color: #c70101;
@@ -5359,6 +5363,9 @@ progress {
     flex-direction: column;
     gap: 10px;
   }
+  .catalog__tab {
+    width: 90%;
+  }
   .carousel .slick-prev {
     left: -50px;
   }
@@ -5397,6 +5404,7 @@ progress {
   }
   .modal {
     width: 300px;
+    min-height: 350px;
     padding: 40px 20px;
   }
   .modal__subtitle {
@@ -5435,9 +5443,6 @@ progress {
   }
   .catalog__content {
     width: 300px;
-  }
-  .catalog__tab {
-    width: 90%;
   }
   .promotion__descr {
     margin-top: 20px;
