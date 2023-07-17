@@ -1,10 +1,7 @@
 .button {
-    width: 150px;
-    height: 30px;
     border-radius: 5px;
     background-color: $main-color;
     border: none;
-    font-size: 12px;
     font-weight: 500;
     color: #fff;
     text-transform: uppercase;
@@ -14,9 +11,14 @@
         height: 50px;
         font-size: 16px;
     }
-    &_submit {
+    &_submit-consultation {
         width: 100%;
         height: 55px;
+        font-size: 16px;
+    }
+    &_submit-review {
+        width: 100%;
+        height: 50px;
         font-size: 16px;
     }
     &_mini {
@@ -30,6 +32,7 @@
         border: 1px solid $main-color;
         width: 180px;
         height: 180px;
+        font-size: 12px;
         border-radius: 50%;
         margin-bottom: 20px;
         :hover{

@@ -3,6 +3,11 @@
         width: 650px;
         margin: 0 auto;
     }
+    .footer__info {
+        height: 240px;
+        width: 400px;
+        padding: 30px 20px;
+    }
 
 }
 @media (max-width: 991px){
@@ -13,6 +18,26 @@
     .promotion {
         .title {
         font-size: 29px;
+        }
+    }
+
+    .reviews-item__text {
+        width: 650px;
+    }
+
+    .footer{
+        &__info {
+        height: 200px;
+        }
+        &__adder, &__phone {
+            margin-bottom: 25px;
+        }
+        &__scocial-item {
+            width: 45px;
+            height: 45px;
+            img {
+                height: 24px;
+            }
         }
     }
 }
@@ -71,7 +96,7 @@
     .reviews{
         &-item {
             margin-bottom: 50px;
-            &_text {
+            &__text {
                 width: 500px;
             }
         }
@@ -90,6 +115,23 @@
     }
     .reviews-item__text {
         width: 400px;
+    }
+    .footer{
+        &__info {
+            height: 180px;
+            width: 380px;
+        }
+        &__adder, &__phone {
+            margin-bottom: 22px;
+            font-size: 18px;
+        }
+        &__scocial-item {
+            width: 40px;
+            height: 40px;
+            img {
+                height: 19px;
+            }
+        }
     }
 }
 
@@ -171,9 +213,6 @@
         }
     }
     .button {
-        width: 145px;
-        height: 27px;
-        font-size: 10px;
         &__main {
             margin-top: 45px;
             width: 250px;
@@ -181,7 +220,7 @@
             line-height: 48px;
             font-size: 14px;
         }
-        &_submit {
+        &_submit-consultation {
             height: 40px;
             width: 250px;
             font-size: 11px;
@@ -290,6 +329,12 @@
             }
         }
     }
+    .footer {
+        height: 500px;
+        &__info {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 481px){
@@ -359,6 +404,22 @@
         flex-direction: column;
         align-items: center;
     }
+    .modal {
+        width: 300px;
+        min-height: 350px;
+        padding: 40px 20px;
+        &__subtitle {
+            font-size: 16px;
+        }
+        &__descr {
+            font-size: 12px;
+        }
+        &__close {
+            top: 14px;
+            right: 9px;
+            font-size: 26px;
+        }
+    }
 }
 
 
@@ -416,5 +477,18 @@
     }
     .review-form {
         width: 300px;
+    }
+    .button{
+        &__mini{
+            width: 125px;
+            height: 35px;
+            font-size: 12px;
+        }
+    }
+    .footer {
+        height: 450px;
+        &__info {
+           height: 200px;
+        }
     }
 }

@@ -4365,12 +4365,9 @@ progress {
 }
 
 .button {
-  width: 150px;
-  height: 30px;
   border-radius: 5px;
   background-color: #c70101;
   border: none;
-  font-size: 12px;
   font-weight: 500;
   color: #fff;
   text-transform: uppercase;
@@ -4381,9 +4378,14 @@ progress {
   height: 50px;
   font-size: 16px;
 }
-.button_submit {
+.button_submit-consultation {
   width: 100%;
   height: 55px;
+  font-size: 16px;
+}
+.button_submit-review {
+  width: 100%;
+  height: 50px;
   font-size: 16px;
 }
 .button_mini {
@@ -4397,6 +4399,7 @@ progress {
   border: 1px solid #c70101;
   width: 180px;
   height: 180px;
+  font-size: 12px;
   border-radius: 50%;
   margin-bottom: 20px;
 }
@@ -5037,6 +5040,11 @@ progress {
     width: 650px;
     margin: 0 auto;
   }
+  .footer__info {
+    height: 240px;
+    width: 400px;
+    padding: 30px 20px;
+  }
 }
 @media (max-width: 991px) {
   .container {
@@ -5044,6 +5052,22 @@ progress {
   }
   .promotion .title {
     font-size: 29px;
+  }
+  .reviews-item__text {
+    width: 650px;
+  }
+  .footer__info {
+    height: 200px;
+  }
+  .footer__adder, .footer__phone {
+    margin-bottom: 25px;
+  }
+  .footer__scocial-item {
+    width: 45px;
+    height: 45px;
+  }
+  .footer__scocial-item img {
+    height: 24px;
   }
 }
 @media (max-width: 900px) {
@@ -5093,6 +5117,12 @@ progress {
   .promotion__timer .timer {
     gap: 25px;
   }
+  .reviews-item {
+    margin-bottom: 50px;
+  }
+  .reviews-item__text {
+    width: 500px;
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -5103,6 +5133,24 @@ progress {
   }
   .catalog {
     padding: 90px 0;
+  }
+  .reviews-item__text {
+    width: 400px;
+  }
+  .footer__info {
+    height: 180px;
+    width: 380px;
+  }
+  .footer__adder, .footer__phone {
+    margin-bottom: 22px;
+    font-size: 18px;
+  }
+  .footer__scocial-item {
+    width: 40px;
+    height: 40px;
+  }
+  .footer__scocial-item img {
+    height: 19px;
   }
 }
 @media (max-width: 680px) {
@@ -5120,6 +5168,14 @@ progress {
   }
   .carousel .slick-next {
     right: -66px;
+  }
+  .reviews-item__img {
+    width: 150px;
+    height: 150px;
+    margin-right: 25px;
+  }
+  .reviews-item__text {
+    width: 370px;
   }
 }
 @media (max-width: 575px) {
@@ -5168,11 +5224,6 @@ progress {
   .header__phone {
     font-size: 13px;
   }
-  .button {
-    width: 145px;
-    height: 27px;
-    font-size: 10px;
-  }
   .button__main {
     margin-top: 45px;
     width: 250px;
@@ -5180,10 +5231,14 @@ progress {
     line-height: 48px;
     font-size: 14px;
   }
-  .button_submit {
+  .button_submit-consultation {
     height: 40px;
     width: 250px;
     font-size: 11px;
+  }
+  .button__white {
+    width: 145px;
+    height: 145px;
   }
   .benefits {
     padding: 35px 0 40px 0;
@@ -5262,6 +5317,26 @@ progress {
   .promotion__timer .timer__block span {
     font-size: 45px;
   }
+  .reviews__items {
+    margin: 50px 0;
+  }
+  .reviews-item__img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+  .reviews-item__text {
+    width: 370px;
+  }
+  .reviews-item__descr {
+    font-size: 15px;
+  }
+  .footer {
+    height: 500px;
+  }
+  .footer__info {
+    width: 100%;
+  }
 }
 @media (max-width: 481px) {
   .container {
@@ -5304,6 +5379,37 @@ progress {
   .promotion__timer .timer__block span {
     font-size: 33px;
   }
+  .reviews-item {
+    flex-direction: column;
+  }
+  .reviews-item__img {
+    margin-bottom: 20px;
+  }
+  .reviews-item_text {
+    width: 360px;
+  }
+  .review-form {
+    margin-top: 20px;
+    gap: 10px;
+    width: 350px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .modal {
+    width: 300px;
+    padding: 40px 20px;
+  }
+  .modal__subtitle {
+    font-size: 16px;
+  }
+  .modal__descr {
+    font-size: 12px;
+  }
+  .modal__close {
+    top: 14px;
+    right: 9px;
+    font-size: 26px;
+  }
 }
 @media (max-width: 370px) {
   .container {
@@ -5330,6 +5436,9 @@ progress {
   .catalog__content {
     width: 300px;
   }
+  .catalog__tab {
+    width: 90%;
+  }
   .promotion__descr {
     margin-top: 20px;
     font-size: 17px;
@@ -5346,5 +5455,22 @@ progress {
   }
   .promotion__timer .timer__block span {
     font-size: 24px;
+  }
+  .reviews-item__text {
+    width: 300px;
+  }
+  .review-form {
+    width: 300px;
+  }
+  .button__mini {
+    width: 125px;
+    height: 35px;
+    font-size: 12px;
+  }
+  .footer {
+    height: 450px;
+  }
+  .footer__info {
+    height: 200px;
   }
 }
