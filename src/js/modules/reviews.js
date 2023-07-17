@@ -1,9 +1,11 @@
 import {getData} from './local_storage';
 
 
+
 async function reviews(selector) {
     class Review {
-        constructor (name, photo, marathon, text, parentSelector) {
+        constructor (id, name, photo, marathon, text, parentSelector) {
+            this.id = id
             this.name = name;
             this.photo = photo;
             this.marathon = marathon;
@@ -16,6 +18,7 @@ async function reviews(selector) {
             const element = document.createElement('div');
             element.classList.add('reviews-item', 'animate__animated', 'animate__fadeInRight', 'wow');
             element.setAttribute("data-wow-duration", "1.5s");
+            element.setAttribute("data-index", `${this.id}`);
             element.innerHTML = `
                 <div class="reviews-item__img">
                     <img src=${this.photo} alt=${this.name}>
@@ -38,8 +41,12 @@ async function reviews(selector) {
         const promises = arr.map(
             async ([key, info]) => {
             const {name, photo, marathon, text} = info;
-            //тут добавить проверку по key, есть ли отзыв по данному ключу на странице, если нет , то добавляем новый. Скорей всего ключ записывать в дата атрибут
+            const isReview = document.querySelector(`[data-index="${key}"]`);
+            if(isReview) {
+                return
+            }
             const review = new Review(
+                key,
                 name,
                 photo,
                 marathon,

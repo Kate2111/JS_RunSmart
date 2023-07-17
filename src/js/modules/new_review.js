@@ -2,11 +2,13 @@ import { postPhoto } from './services';
 import {postData} from './services';
 import reviews from './reviews';
 
-async function forms(formSelector, selectorName, selectorMarathon, selectorReview, file) {
+async function newReview(formSelector, selectorName, selectorMarathon, selectorReview, selectorPhoto, downloadPhoto, file) {
     const forms = document.querySelectorAll(formSelector);
     const inputName = document.querySelector(selectorName);
     const inputMarathon = document.querySelector(selectorMarathon);
     const inputReview = document.querySelector(selectorReview);
+    const inputPhoto = document.querySelector(selectorPhoto);
+    const btnDownloadPhoto = document.querySelector(downloadPhoto);
    
 
     forms.forEach(item => {
@@ -26,16 +28,18 @@ async function forms(formSelector, selectorName, selectorMarathon, selectorRevie
             }
     
             if(infoUserReview.name !== '' && infoUserReview.marathon !== '' && infoUserReview.text !== '') {
-                await postData(infoUserReview)
+                await postData("reviews", infoUserReview)
                 inputName.value = '';
                 inputMarathon.value = '';
                 inputReview.value = '';
-                //reviews('.reviews__items');когда вызываем эту функцию, то у нас добавляются к имеющимся отзывам , те же отзывы плюч новый, нужно сделать какую то проверку , чтобы добавлять отзыв только тот  которого нет
+                inputPhoto.remove();
+                btnDownloadPhoto.style.display = 'inline-block';
+                await reviews('.reviews__items');
             }
         });
     }
 }
 
-export default forms;
+export default newReview;
 
 

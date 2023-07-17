@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase, get, set, push, ref } from "firebase/database";
 import { getStorage, ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage"
+import reviews from "./reviews";
 
 
 const firebaseConfig = {
@@ -43,9 +44,9 @@ function getResource(recourse) {
 }
 
 
-function postData(data) {
+function postData(recourse, data) {
   
-  const recourseRef = ref(db, "reviews");
+  const recourseRef = ref(db, recourse);
   return new Promise((resolve, reject) => {
     const newElem = push(recourseRef);
     set(newElem,data)
@@ -57,6 +58,7 @@ function postData(data) {
       reject(error);
     });
   });
+  
 }
 
 function postPhoto(image) {

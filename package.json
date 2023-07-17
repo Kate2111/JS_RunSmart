@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://kate2111.github.io/Progect3_RunSmart", 
+  "homepage": "https://kate2111.github.io/Progect3_RunSmart",
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
@@ -32,6 +32,7 @@
     "@babel/polyfill": "^7.12.1",
     "es6-promise": "^4.2.8",
     "firebase": "^9.22.2",
+    "firebase-functions": "^4.4.1",
     "mongodb": "^5.6.0",
     "nanoid": "^4.0.2",
     "nodelist-foreach-polyfill": "^1.2.0"

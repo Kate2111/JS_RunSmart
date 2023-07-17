@@ -84,6 +84,8 @@
             color: $main-color;
             text-align: center;
             text-transform: uppercase;
+            background-color: transparent;
+            border: none;
             &:hover {
                 color: $main-color;
             }
@@ -168,6 +170,8 @@
             color: $main-color;
             text-align: center;
             text-transform: uppercase;
+            background-color: transparent;
+            border: none;
             &:hover {
                 color: $main-color;
             }   

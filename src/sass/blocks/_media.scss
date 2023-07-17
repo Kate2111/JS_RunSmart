@@ -361,6 +361,9 @@
             flex-direction: column;
             gap: 10px
         }
+        &__tab{
+            width: 90%;
+        }
     }
     .carousel .slick-prev {
         left: -50px;
@@ -448,9 +451,6 @@
         padding: 70px 0;
         &__content {
             width: 300px;   
-        }
-        &__tab {
-            width: 90%;
         }
     }
     .promotion{

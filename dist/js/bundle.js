@@ -20068,7 +20068,7 @@ function _cards() {
               value: function render() {
                 var element = document.createElement('div');
                 element.classList.add('catalog-item');
-                element.innerHTML = "\n                <div class=\"catalog-item__wrapper\">\n                    <div class=\"catalog-item__content catalog-item__content_active\">\n                        <div class=\"carousel\">\n                            <div class=\"carousel__inner\">\n                                <div>\n                                    <img src=".concat(this.src1, " alt=\"slide\">\n                                </div>\n                                <div>\n                                    <img src=").concat(this.src2, " alt=\"slide\">\n                                </div>\n                                <div>\n                                    <img src=").concat(this.src3, " alt=\"slide\">\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"catalog-item__subtitle\">").concat(this.subtitle, "</div>\n                        <a href=\"#\" class=\"catalog-item__link\">\u041F\u041E\u0414\u0420\u041E\u0411\u041D\u0415\u0415</a>\n                    </div>\n                    <div class=\"catalog-item__list\">\n                        <ul>\n                            <li>").concat(this.descr1, "</li>\n                            <li>").concat(this.descr2, "</li>\n                            <li>").concat(this.descr3, "</li>\n                            <li>").concat(this.descr4, "</li>\n                        </ul>\n                        <a href=\"#\" class=\"catalog-item__back\">\u043D\u0430\u0437\u0430\u0434</a>\n                    </div>\n                </div>\n                <hr>\n\n                <div class=\"catalog-item__footer\">\n                    <div class=\"catalog-item__prices\">\n                        <div class=\"catalog-item__old-price\">").concat(this.oldprice, " \u0440\u0443\u0431.</div>\n                        <div class=\"catalog-item__price\">").concat(this.price, " \u0440\u0443\u0431.</div>\n                    </div>\n                    <button class=\"button button_mini\">\u041A\u0423\u041F\u0418\u0422\u042C</button>\n                </div> \n            ");
+                element.innerHTML = "\n                <div class=\"catalog-item__wrapper\">\n                    <div class=\"catalog-item__content catalog-item__content_active\">\n                        <div class=\"carousel\">\n                            <div class=\"carousel__inner\">\n                                <div>\n                                    <img src=".concat(this.src1, " alt=\"slide\">\n                                </div>\n                                <div>\n                                    <img src=").concat(this.src2, " alt=\"slide\">\n                                </div>\n                                <div>\n                                    <img src=").concat(this.src3, " alt=\"slide\">\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"catalog-item__subtitle\">").concat(this.subtitle, "</div>\n                        <button class=\"catalog-item__link\">\u041F\u041E\u0414\u0420\u041E\u0411\u041D\u0415\u0415</button>\n                    </div>\n                    <div class=\"catalog-item__list\">\n                        <ul>\n                            <li>").concat(this.descr1, "</li>\n                            <li>").concat(this.descr2, "</li>\n                            <li>").concat(this.descr3, "</li>\n                            <li>").concat(this.descr4, "</li>\n                        </ul>\n                        <button class=\"catalog-item__back\">\u043D\u0430\u0437\u0430\u0434</button>\n                    </div>\n                </div>\n                <hr>\n\n                <div class=\"catalog-item__footer\">\n                    <div class=\"catalog-item__prices\">\n                        <div class=\"catalog-item__old-price\">").concat(this.oldprice, " \u0440\u0443\u0431.</div>\n                        <div class=\"catalog-item__price\">").concat(this.price, " \u0440\u0443\u0431.</div>\n                    </div>\n                    <button class=\"button button_mini\">\u041A\u0423\u041F\u0418\u0422\u042C</button>\n                </div> \n            ");
                 this.parent.append(element);
               }
             }]);
@@ -20351,12 +20351,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
-/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
-
-
 function modal() {
   $('[data-modal=consultation]').on('click', function () {
     $('.overlay, #consultation').fadeIn('slow');
@@ -20389,20 +20383,6 @@ function modal() {
   valideForms('#consultation form');
   valideForms('#order form');
   $('input[name=phone]').mask('+7 (999) 999-99-99');
-  $('form').submit(function (e) {
-    e.preventDefault();
-    $.ajax({
-      type: 'POST',
-      url: 'mailer/smart.php',
-      data: $(this).serialize()
-    }).done(function () {
-      $(this).find('input').val('');
-      $('#consultation, #order').fadeOut();
-      $('.overlay, #thanks').fadeIn('slow');
-      $('form').trigger('reset');
-    });
-    return false;
-  });
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);
 
@@ -20491,12 +20471,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-function forms(_x, _x2, _x3, _x4, _x5) {
-  return _forms.apply(this, arguments);
+function newReview(_x, _x2, _x3, _x4, _x5, _x6, _x7) {
+  return _newReview.apply(this, arguments);
 }
-function _forms() {
-  _forms = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(formSelector, selectorName, selectorMarathon, selectorReview, file) {
-    var forms, inputName, inputMarathon, inputReview, bindPostData, _bindPostData;
+function _newReview() {
+  _newReview = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(formSelector, selectorName, selectorMarathon, selectorReview, selectorPhoto, downloadPhoto, file) {
+    var forms, inputName, inputMarathon, inputReview, inputPhoto, btnDownloadPhoto, bindPostData, _bindPostData;
     return _regeneratorRuntime().wrap(function _callee3$(_context3) {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
@@ -20523,23 +20503,26 @@ function _forms() {
                                 photo: urlPhotoUSer
                               };
                               if (!(infoUserReview.name !== '' && infoUserReview.marathon !== '' && infoUserReview.text !== '')) {
-                                _context.next = 11;
+                                _context.next = 15;
                                 break;
                               }
                               _context.next = 8;
-                              return (0,_services__WEBPACK_IMPORTED_MODULE_21__.postData)(infoUserReview);
+                              return (0,_services__WEBPACK_IMPORTED_MODULE_21__.postData)("reviews", infoUserReview);
                             case 8:
                               inputName.value = '';
                               inputMarathon.value = '';
                               inputReview.value = '';
-                              //reviews('.reviews__items');когда вызываем эту функцию, то у нас добавляются к имеющимся отзывам , те же отзывы плюч новый, нужно сделать какую то проверку , чтобы добавлять отзыв только тот  которого нет
-                            case 11:
+                              inputPhoto.remove();
+                              btnDownloadPhoto.style.display = 'inline-block';
+                              _context.next = 15;
+                              return (0,_reviews__WEBPACK_IMPORTED_MODULE_22__["default"])('.reviews__items');
+                            case 15:
                             case "end":
                               return _context.stop();
                           }
                         }, _callee);
                       }));
-                      return function (_x7) {
+                      return function (_x9) {
                         return _ref.apply(this, arguments);
                       };
                     }());
@@ -20551,25 +20534,27 @@ function _forms() {
             }));
             return _bindPostData.apply(this, arguments);
           };
-          bindPostData = function _bindPostData2(_x6) {
+          bindPostData = function _bindPostData2(_x8) {
             return _bindPostData.apply(this, arguments);
           };
           forms = document.querySelectorAll(formSelector);
           inputName = document.querySelector(selectorName);
           inputMarathon = document.querySelector(selectorMarathon);
           inputReview = document.querySelector(selectorReview);
+          inputPhoto = document.querySelector(selectorPhoto);
+          btnDownloadPhoto = document.querySelector(downloadPhoto);
           forms.forEach(function (item) {
             bindPostData(item);
           });
-        case 7:
+        case 9:
         case "end":
           return _context3.stop();
       }
     }, _callee3);
   }));
-  return _forms.apply(this, arguments);
+  return _newReview.apply(this, arguments);
 }
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (forms);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (newReview);
 
 /***/ }),
 
@@ -20704,8 +20689,9 @@ function _reviews() {
       while (1) switch (_context2.prev = _context2.next) {
         case 0:
           Review = /*#__PURE__*/function () {
-            function Review(name, photo, marathon, text, parentSelector) {
+            function Review(id, name, photo, marathon, text, parentSelector) {
               _classCallCheck(this, Review);
+              this.id = id;
               this.name = name;
               this.photo = photo;
               this.marathon = marathon;
@@ -20719,6 +20705,7 @@ function _reviews() {
                 var element = document.createElement('div');
                 element.classList.add('reviews-item', 'animate__animated', 'animate__fadeInRight', 'wow');
                 element.setAttribute("data-wow-duration", "1.5s");
+                element.setAttribute("data-index", "".concat(this.id));
                 element.innerHTML = "\n                <div class=\"reviews-item__img\">\n                    <img src=".concat(this.photo, " alt=").concat(this.name, ">\n                </div>\n                <div class=\"reviews-item__text\">\n                    <div class=\"reviews-item__subtitle\">").concat(this.name, "</div>\n                    <div class=\"reviews-item__minititle\">").concat(this.marathon, "</div>\n                    <div class=\"reviews-item__descr\">\n                        ").concat(this.text, "\n                    </div>\n                </div>\n            ");
                 this.parent.append(element);
               }
@@ -20732,15 +20719,22 @@ function _reviews() {
           arr = _context2.sent;
           promises = arr.map( /*#__PURE__*/function () {
             var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(_ref) {
-              var _ref3, key, info, name, photo, marathon, text, review;
+              var _ref3, key, info, name, photo, marathon, text, isReview, review;
               return _regeneratorRuntime().wrap(function _callee$(_context) {
                 while (1) switch (_context.prev = _context.next) {
                   case 0:
                     _ref3 = _slicedToArray(_ref, 2), key = _ref3[0], info = _ref3[1];
-                    name = info.name, photo = info.photo, marathon = info.marathon, text = info.text; //тут добавить проверку по key, есть ли отзыв по данному ключу на странице, если нет , то добавляем новый. Скорей всего ключ записывать в дата атрибут
-                    review = new Review(name, photo, marathon, text, "".concat(selector));
+                    name = info.name, photo = info.photo, marathon = info.marathon, text = info.text;
+                    isReview = document.querySelector("[data-index=\"".concat(key, "\"]"));
+                    if (!isReview) {
+                      _context.next = 5;
+                      break;
+                    }
+                    return _context.abrupt("return");
+                  case 5:
+                    review = new Review(key, name, photo, marathon, text, "".concat(selector));
                     review.render();
-                  case 4:
+                  case 7:
                   case "end":
                     return _context.stop();
                 }
@@ -20824,6 +20818,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/esm/index.esm.js");
 /* harmony import */ var firebase_database__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! firebase/database */ "./node_modules/firebase/database/dist/esm/index.esm.js");
 /* harmony import */ var firebase_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! firebase/storage */ "./node_modules/firebase/storage/dist/esm/index.esm.js");
+/* harmony import */ var _reviews__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./reviews */ "./src/js/modules/reviews.js");
+
 
 
 
@@ -20860,8 +20856,8 @@ function getResource(recourse) {
     });
   });
 }
-function postData(data) {
-  var recourseRef = (0,firebase_database__WEBPACK_IMPORTED_MODULE_4__.ref)(db, "reviews");
+function postData(recourse, data) {
+  var recourseRef = (0,firebase_database__WEBPACK_IMPORTED_MODULE_4__.ref)(db, recourse);
   return new Promise(function (resolve, reject) {
     var newElem = (0,firebase_database__WEBPACK_IMPORTED_MODULE_4__.push)(recourseRef);
     (0,firebase_database__WEBPACK_IMPORTED_MODULE_4__.set)(newElem, data).then(function () {
@@ -21083,8 +21079,6 @@ function upload(selector, parent) {
         button.style.display = 'none';
         resolve(file);
       };
-
-      //console.log(reader.readAsDataURL(file)); 
       reader.readAsDataURL(file);
     };
     var removePhotoUser = function removePhotoUser(event) {
@@ -21096,10 +21090,200 @@ function upload(selector, parent) {
     };
     button.addEventListener('click', trigerInput);
     input.addEventListener('change', changeHandler);
-    //почему то эта функция не срабатывает после отправки данных на сервер
     newReview.addEventListener('click', removePhotoUser);
   });
 }
+
+/***/ }),
+
+/***/ "./src/js/modules/user_consultation.js":
+/*!*********************************************!*\
+  !*** ./src/js/modules/user_consultation.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.promise.js */ "./node_modules/core-js/modules/es.promise.js");
+/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_object_from_entries_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.object.from-entries.js */ "./node_modules/core-js/modules/es.object.from-entries.js");
+/* harmony import */ var core_js_modules_es_object_from_entries_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_from_entries_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_object_define_property_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.object.define-property.js */ "./node_modules/core-js/modules/es.object.define-property.js");
+/* harmony import */ var core_js_modules_es_object_define_property_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_define_property_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.symbol.description.js */ "./node_modules/core-js/modules/es.symbol.description.js");
+/* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator.js */ "./node_modules/core-js/modules/es.symbol.iterator.js");
+/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var core_js_modules_es_symbol_async_iterator_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! core-js/modules/es.symbol.async-iterator.js */ "./node_modules/core-js/modules/es.symbol.async-iterator.js");
+/* harmony import */ var core_js_modules_es_symbol_async_iterator_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_async_iterator_js__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var core_js_modules_es_symbol_to_string_tag_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! core-js/modules/es.symbol.to-string-tag.js */ "./node_modules/core-js/modules/es.symbol.to-string-tag.js");
+/* harmony import */ var core_js_modules_es_symbol_to_string_tag_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_to_string_tag_js__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var core_js_modules_es_json_to_string_tag_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! core-js/modules/es.json.to-string-tag.js */ "./node_modules/core-js/modules/es.json.to-string-tag.js");
+/* harmony import */ var core_js_modules_es_json_to_string_tag_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_json_to_string_tag_js__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var core_js_modules_es_math_to_string_tag_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! core-js/modules/es.math.to-string-tag.js */ "./node_modules/core-js/modules/es.math.to-string-tag.js");
+/* harmony import */ var core_js_modules_es_math_to_string_tag_js__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_math_to_string_tag_js__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var core_js_modules_es_object_create_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! core-js/modules/es.object.create.js */ "./node_modules/core-js/modules/es.object.create.js");
+/* harmony import */ var core_js_modules_es_object_create_js__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_create_js__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var core_js_modules_es_object_get_prototype_of_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! core-js/modules/es.object.get-prototype-of.js */ "./node_modules/core-js/modules/es.object.get-prototype-of.js");
+/* harmony import */ var core_js_modules_es_object_get_prototype_of_js__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_get_prototype_of_js__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var core_js_modules_es_object_set_prototype_of_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! core-js/modules/es.object.set-prototype-of.js */ "./node_modules/core-js/modules/es.object.set-prototype-of.js");
+/* harmony import */ var core_js_modules_es_object_set_prototype_of_js__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_set_prototype_of_js__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var core_js_modules_es_array_reverse_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! core-js/modules/es.array.reverse.js */ "./node_modules/core-js/modules/es.array.reverse.js");
+/* harmony import */ var core_js_modules_es_array_reverse_js__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_reverse_js__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! core-js/modules/es.array.slice.js */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services */ "./src/js/modules/services.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function valideForms(form) {
+  $(form).validate({
+    rules: {
+      name: 'required',
+      phone: 'required',
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      name: 'Пожалуйста, введите свое имя',
+      phone: 'Пожалуйста, введите свой номер телефона',
+      email: {
+        required: 'Пожалуйста, введите свою почту',
+        email: 'Неправильно введен адрес почты'
+      }
+    }
+  });
+}
+;
+function forms(_x, _x2, _x3, _x4, _x5) {
+  return _forms.apply(this, arguments);
+}
+function _forms() {
+  _forms = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(formSelector, selectorConsultation, selectorOrder, selectorOverlay, selectorThanks) {
+    var forms, consultation, order, overlay, thanks, bindPostData, _bindPostData;
+    return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+      while (1) switch (_context3.prev = _context3.next) {
+        case 0:
+          _bindPostData = function _bindPostData3() {
+            _bindPostData = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(form) {
+              return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+                while (1) switch (_context2.prev = _context2.next) {
+                  case 0:
+                    form.addEventListener('submit', /*#__PURE__*/function () {
+                      var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(e) {
+                        var formData, formDataForAuth, json;
+                        return _regeneratorRuntime().wrap(function _callee$(_context) {
+                          while (1) switch (_context.prev = _context.next) {
+                            case 0:
+                              e.preventDefault();
+                              if (!$(form).valid()) {
+                                _context.next = 18;
+                                break;
+                              }
+                              formData = new FormData(form);
+                              formDataForAuth = Object.fromEntries(formData.entries());
+                              json = JSON.stringify(formDataForAuth);
+                              _context.prev = 5;
+                              _context.next = 8;
+                              return (0,_services__WEBPACK_IMPORTED_MODULE_22__.postData)('users', json);
+                            case 8:
+                              form.reset();
+                              consultation.style.display = 'none';
+                              order.style.display = 'none';
+                              overlay.style.display = 'block';
+                              thanks.style.display = 'block';
+                              _context.next = 18;
+                              break;
+                            case 15:
+                              _context.prev = 15;
+                              _context.t0 = _context["catch"](5);
+                              console.error('Ошибка при отправке данных:', _context.t0);
+                            case 18:
+                            case "end":
+                              return _context.stop();
+                          }
+                        }, _callee, null, [[5, 15]]);
+                      }));
+                      return function (_x7) {
+                        return _ref.apply(this, arguments);
+                      };
+                    }());
+                  case 1:
+                  case "end":
+                    return _context2.stop();
+                }
+              }, _callee2);
+            }));
+            return _bindPostData.apply(this, arguments);
+          };
+          bindPostData = function _bindPostData2(_x6) {
+            return _bindPostData.apply(this, arguments);
+          };
+          forms = document.querySelectorAll(formSelector);
+          consultation = document.getElementById(selectorConsultation);
+          order = document.getElementById(selectorOrder);
+          overlay = document.querySelector(selectorOverlay);
+          thanks = document.getElementById(selectorThanks);
+          valideForms('#consultation-form');
+          valideForms('#consultation form');
+          valideForms('#order form');
+          forms.forEach(function (item) {
+            bindPostData(item);
+          });
+        case 11:
+        case "end":
+          return _context3.stop();
+      }
+    }, _callee3);
+  }));
+  return _forms.apply(this, arguments);
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (forms);
 
 /***/ }),
 
@@ -26191,6 +26375,31 @@ $({ target: 'Object', stat: true }, {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es.object.from-entries.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/core-js/modules/es.object.from-entries.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var iterate = __webpack_require__(/*! ../internals/iterate */ "./node_modules/core-js/internals/iterate.js");
+var createProperty = __webpack_require__(/*! ../internals/create-property */ "./node_modules/core-js/internals/create-property.js");
+
+// `Object.fromEntries` method
+// https://github.com/tc39/proposal-object-from-entries
+$({ target: 'Object', stat: true }, {
+  fromEntries: function fromEntries(iterable) {
+    var obj = {};
+    iterate(iterable, function (k, v) {
+      createProperty(obj, k, v);
+    }, { AS_ENTRIES: true });
+    return obj;
+  }
+});
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es.object.get-own-property-symbols.js":
 /*!****************************************************************************!*\
   !*** ./node_modules/core-js/modules/es.object.get-own-property-symbols.js ***!
@@ -29775,6 +29984,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js");
 /* harmony import */ var _modules_new_review__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./modules/new_review */ "./src/js/modules/new_review.js");
 /* harmony import */ var _modules_upload__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./modules/upload */ "./src/js/modules/upload.js");
+/* harmony import */ var _modules_user_consultation__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./modules/user_consultation */ "./src/js/modules/user_consultation.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 
@@ -29807,6 +30017,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
+
 $(document).ready(function () {
   function processUpload() {
     return _processUpload.apply(this, arguments);
@@ -29821,7 +30032,7 @@ $(document).ready(function () {
             return (0,_modules_upload__WEBPACK_IMPORTED_MODULE_27__["default"])('#file', '.reviews__new-review');
           case 2:
             file = _context.sent;
-            (0,_modules_new_review__WEBPACK_IMPORTED_MODULE_26__["default"])('#review-form', '#name', '#marathon', '#text', file);
+            (0,_modules_new_review__WEBPACK_IMPORTED_MODULE_26__["default"])('#review-form', '#name', '#marathon', '#text', '.reviews__photo', '.button.button__white', file);
           case 4:
           case "end":
             return _context.stop();
@@ -29838,6 +30049,7 @@ $(document).ready(function () {
   (0,_modules_reviews__WEBPACK_IMPORTED_MODULE_24__["default"])('.reviews__items');
   processUpload();
   (0,_modules_timer__WEBPACK_IMPORTED_MODULE_25__["default"])();
+  (0,_modules_user_consultation__WEBPACK_IMPORTED_MODULE_28__["default"])('.feed-form', '#consultation', '#order', '.overlay', '#thanks');
 });
 })();
 

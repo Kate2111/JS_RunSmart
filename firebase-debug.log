@@ -1,0 +1,256 @@
+[debug] [2023-07-17T13:35:07.978Z] ----------------------------------------------------------------------
+[debug] [2023-07-17T13:35:07.980Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nosko\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-07-17T13:35:07.980Z] CLI Version:   12.4.4
+[debug] [2023-07-17T13:35:07.980Z] Platform:      win32
+[debug] [2023-07-17T13:35:07.981Z] Node Version:  v18.13.0
+[debug] [2023-07-17T13:35:07.981Z] Time:          Mon Jul 17 2023 17:35:07 GMT+0400 (Грузия, стандартное время)
+[debug] [2023-07-17T13:35:07.981Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-17T13:35:08.052Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-17T13:35:08.052Z] > authorizing via signed-in user (noskovaekaterina6@gmail.com)
+[debug] [2023-07-17T13:35:08.052Z] [iam] checking project myrunsmart for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasedatabase.instances.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-07-17T13:35:08.054Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/myrunsmart:testIamPermissions [none]
+[debug] [2023-07-17T13:35:08.054Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/myrunsmart:testIamPermissions x-goog-quota-user=projects/myrunsmart
+[debug] [2023-07-17T13:35:08.054Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/myrunsmart:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasedatabase.instances.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-07-17T13:35:09.488Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/myrunsmart:testIamPermissions 200
+[debug] [2023-07-17T13:35:09.489Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/myrunsmart:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasedatabase.instances.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-07-17T13:35:09.489Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/myrunsmart/serviceAccounts/myrunsmart@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-07-17T13:35:09.489Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/myrunsmart/serviceAccounts/myrunsmart@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-07-17T13:35:11.094Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/myrunsmart/serviceAccounts/myrunsmart@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-07-17T13:35:11.094Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/myrunsmart/serviceAccounts/myrunsmart@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-07-17T13:35:11.095Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart [none]
+[debug] [2023-07-17T13:35:11.850Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart 200
+[debug] [2023-07-17T13:35:11.850Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart {"projectId":"myrunsmart","projectNumber":"746845981121","displayName":"MyRunSmart","name":"projects/myrunsmart","resources":{"hostingSite":"myrunsmart","realtimeDatabaseInstance":"myrunsmart-default-rtdb","storageBucket":"myrunsmart.appspot.com","locationId":"asia-east2"},"state":"ACTIVE","etag":"1_6736de7a-fb4e-495f-b956-cdb818bb686c"}
+[info] 
+[info] === Deploying to 'myrunsmart'...
+[info] 
+[info] i  deploying database, storage, functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script. 
+[info] i  database: checking rules syntax... 
+[debug] [2023-07-17T13:35:13.179Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/myrunsmart/locations/-/instances/myrunsmart-default-rtdb [none]
+[debug] [2023-07-17T13:35:14.726Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/myrunsmart/locations/-/instances/myrunsmart-default-rtdb 200
+[debug] [2023-07-17T13:35:14.726Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/myrunsmart/locations/-/instances/myrunsmart-default-rtdb {"name":"projects/746845981121/locations/asia-southeast1/instances/myrunsmart-default-rtdb","project":"projects/746845981121","databaseUrl":"https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-07-17T13:35:14.728Z] >>> [apiv2][query] PUT https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json dryRun=true
+[debug] [2023-07-17T13:35:14.728Z] >>> [apiv2][body] PUT https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json "{\n  \"rules\": {\n    \".read\": true,\n    \".write\": true\n  }\n}"
+[debug] [2023-07-17T13:35:15.702Z] <<< [apiv2][status] PUT https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2023-07-17T13:35:15.702Z] <<< [apiv2][body] PUT https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json {"status":"ok"}
+[info] +  database: rules syntax for database myrunsmart-default-rtdb is valid 
+[debug] [2023-07-17T13:35:15.704Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart [none]
+[debug] [2023-07-17T13:35:16.471Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart 200
+[debug] [2023-07-17T13:35:16.472Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart {"projectId":"myrunsmart","projectNumber":"746845981121","displayName":"MyRunSmart","name":"projects/myrunsmart","resources":{"hostingSite":"myrunsmart","realtimeDatabaseInstance":"myrunsmart-default-rtdb","storageBucket":"myrunsmart.appspot.com","locationId":"asia-east2"},"state":"ACTIVE","etag":"1_6736de7a-fb4e-495f-b956-cdb818bb686c"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2023-07-17T13:35:16.476Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/myrunsmart:test [none]
+[debug] [2023-07-17T13:35:16.476Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/myrunsmart:test [omitted]
+[debug] [2023-07-17T13:35:19.155Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/myrunsmart:test 200
+[debug] [2023-07-17T13:35:19.156Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/myrunsmart:test {}
+[info] +  firebase.storage: rules file storage.rules compiled successfully 
+[debug] [2023-07-17T13:35:19.159Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart [none]
+[debug] [2023-07-17T13:35:19.983Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart 200
+[debug] [2023-07-17T13:35:19.983Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart {"projectId":"myrunsmart","projectNumber":"746845981121","displayName":"MyRunSmart","name":"projects/myrunsmart","resources":{"hostingSite":"myrunsmart","realtimeDatabaseInstance":"myrunsmart-default-rtdb","storageBucket":"myrunsmart.appspot.com","locationId":"asia-east2"},"state":"ACTIVE","etag":"1_6736de7a-fb4e-495f-b956-cdb818bb686c"}
+[info] i  functions: preparing codebase index for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-07-17T13:35:19.987Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-07-17T13:35:19.987Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/myrunsmart
+[debug] [2023-07-17T13:35:19.989Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-07-17T13:35:19.989Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/myrunsmart
+[debug] [2023-07-17T13:35:19.990Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/cloudbuild.googleapis.com [none]
+[debug] [2023-07-17T13:35:19.990Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/cloudbuild.googleapis.com x-goog-quota-user=projects/myrunsmart
+[debug] [2023-07-17T13:35:19.991Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/artifactregistry.googleapis.com [none]
+[debug] [2023-07-17T13:35:19.991Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/artifactregistry.googleapis.com x-goog-quota-user=projects/myrunsmart
+[debug] [2023-07-17T13:35:21.616Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/runtimeconfig.googleapis.com 200
+[debug] [2023-07-17T13:35:21.617Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-07-17T13:35:21.642Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/artifactregistry.googleapis.com 200
+[debug] [2023-07-17T13:35:21.642Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-07-17T13:35:21.656Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/cloudbuild.googleapis.com 200
+[debug] [2023-07-17T13:35:21.656Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-07-17T13:35:21.693Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/cloudfunctions.googleapis.com 200
+[debug] [2023-07-17T13:35:21.693Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/myrunsmart/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-07-17T13:35:21.694Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart/adminSdkConfig [none]
+[debug] [2023-07-17T13:35:22.489Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart/adminSdkConfig 200
+[debug] [2023-07-17T13:35:22.490Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart/adminSdkConfig {"projectId":"myrunsmart","databaseURL":"https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"myrunsmart.appspot.com","locationId":"asia-east2"}
+[debug] [2023-07-17T13:35:22.490Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/myrunsmart/configs [none]
+[debug] [2023-07-17T13:35:23.228Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/myrunsmart/configs 200
+[debug] [2023-07-17T13:35:23.229Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/myrunsmart/configs {}
+[debug] [2023-07-17T13:35:23.231Z] Validating nodejs source
+[debug] [2023-07-17T13:35:24.228Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-07-17T13:35:24.228Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase index to determine what to deploy 
+[debug] [2023-07-17T13:35:24.229Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-07-17T13:35:24.234Z] Found firebase-functions binary at 'C:\Users\nosko\Project\JS_RunSmart\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8948
+
+[debug] [2023-07-17T13:35:24.747Z] Got response from /__/functions.yaml {"endpoints":{"sendNotificationToAdmin":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.create","eventFilters":{"resource":"projects/_/instances/myrunsmart-default-rtdb/refs/users/{usersId}"},"retry":false},"labels":{},"entryPoint":"sendNotificationToAdmin"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\nosko\Project\JS_RunSmart\functions (137.69 KB) for uploading 
+[debug] [2023-07-17T13:35:24.824Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/myrunsmart/locations/-/functions [none]
+[debug] [2023-07-17T13:35:25.911Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/myrunsmart/locations/-/functions 200
+[debug] [2023-07-17T13:35:25.911Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/myrunsmart/locations/-/functions {}
+[debug] [2023-07-17T13:35:25.912Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/myrunsmart/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-07-17T13:35:33.111Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/myrunsmart/locations/-/functions 200
+[debug] [2023-07-17T13:35:33.111Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/myrunsmart/locations/-/functions {}
+[debug] [2023-07-17T13:35:33.116Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart [none]
+[debug] [2023-07-17T13:35:33.875Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart 200
+[debug] [2023-07-17T13:35:33.875Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/myrunsmart {"projectId":"myrunsmart","projectNumber":"746845981121","displayName":"MyRunSmart","name":"projects/myrunsmart","resources":{"hostingSite":"myrunsmart","realtimeDatabaseInstance":"myrunsmart-default-rtdb","storageBucket":"myrunsmart.appspot.com","locationId":"asia-east2"},"state":"ACTIVE","etag":"1_6736de7a-fb4e-495f-b956-cdb818bb686c"}
+[debug] [2023-07-17T13:35:33.878Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/myrunsmart/releases pageSize=10&pageToken=
+[debug] [2023-07-17T13:35:34.997Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/myrunsmart/releases 200
+[debug] [2023-07-17T13:35:34.997Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/myrunsmart/releases {"releases":[{"name":"projects/myrunsmart/releases/firebase.storage/myrunsmart.appspot.com","rulesetName":"projects/myrunsmart/rulesets/82a8ab27-e6a5-4138-b59b-3241ee424396","createTime":"2023-07-07T17:17:18.155387Z","updateTime":"2023-07-17T12:31:09.360468Z"}]}
+[debug] [2023-07-17T13:35:34.998Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/myrunsmart/rulesets/82a8ab27-e6a5-4138-b59b-3241ee424396 [none]
+[debug] [2023-07-17T13:35:36.123Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/myrunsmart/rulesets/82a8ab27-e6a5-4138-b59b-3241ee424396 200
+[debug] [2023-07-17T13:35:36.123Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/myrunsmart/rulesets/82a8ab27-e6a5-4138-b59b-3241ee424396 [omitted]
+[info] i  storage: latest version of storage.rules already up to date, skipping upload... 
+[debug] [2023-07-17T13:35:36.127Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/myrunsmart/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-07-17T13:35:36.127Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/myrunsmart/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2023-07-17T13:35:45.744Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/myrunsmart/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-07-17T13:35:45.744Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/myrunsmart/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-284147357470.us-central1.cloudfunctions.appspot.com/e8da2ce2-a8dc-4956-b7fd-d5ca56ec3abf.zip?GoogleAccessId=service-746845981121@gcf-admin-robot.iam.gserviceaccount.com&Expires=1689602745&Signature=G%2FHSQ6GFioCdovCj1Fi7%2BhvIDUrXSGh6UAdTLf1EDElT%2BabkSwz3dj7%2FGNi2bIusLybdN2IylXk0WQXVZwHLDUCIjSkZvA17Z%2FUsho4xSdIxMTE6GAsoUfwuKTmUnxtgafzR86JtR3KH78tjQRKe8Hh1jm%2BlbU0Gk563ey7Z33GyA86%2FU5zRKiimu2ws%2B4TG9wMWVaEBhp%2FUR8TzZ5JOZqd3SMfbZUC7IARBl3GyGdsyZ4Mw8imrXRA9ghhIHsanfCtJjCOQMw9ubrAU%2FfbhQKmwTgKOMs4YZrLBTljdIYP8%2FTR5CxVCBbgIQwEejnL20yWKw4RdsO5zYMc9swIVfg%3D%3D"}
+[debug] [2023-07-17T13:35:45.745Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-284147357470.us-central1.cloudfunctions.appspot.com/e8da2ce2-a8dc-4956-b7fd-d5ca56ec3abf.zip GoogleAccessId=service-746845981121%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1689602745&Signature=G%2FHSQ6GFioCdovCj1Fi7%2BhvIDUrXSGh6UAdTLf1EDElT%2BabkSwz3dj7%2FGNi2bIusLybdN2IylXk0WQXVZwHLDUCIjSkZvA17Z%2FUsho4xSdIxMTE6GAsoUfwuKTmUnxtgafzR86JtR3KH78tjQRKe8Hh1jm%2BlbU0Gk563ey7Z33GyA86%2FU5zRKiimu2ws%2B4TG9wMWVaEBhp%2FUR8TzZ5JOZqd3SMfbZUC7IARBl3GyGdsyZ4Mw8imrXRA9ghhIHsanfCtJjCOQMw9ubrAU%2FfbhQKmwTgKOMs4YZrLBTljdIYP8%2FTR5CxVCBbgIQwEejnL20yWKw4RdsO5zYMc9swIVfg%3D%3D
+[debug] [2023-07-17T13:35:45.745Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-284147357470.us-central1.cloudfunctions.appspot.com/e8da2ce2-a8dc-4956-b7fd-d5ca56ec3abf.zip [stream]
+[debug] [2023-07-17T13:35:47.909Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-284147357470.us-central1.cloudfunctions.appspot.com/e8da2ce2-a8dc-4956-b7fd-d5ca56ec3abf.zip 200
+[debug] [2023-07-17T13:35:47.909Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-284147357470.us-central1.cloudfunctions.appspot.com/e8da2ce2-a8dc-4956-b7fd-d5ca56ec3abf.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  database: releasing rules... 
+[debug] [2023-07-17T13:35:47.913Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/myrunsmart/locations/-/instances/myrunsmart-default-rtdb [none]
+[debug] [2023-07-17T13:35:49.291Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/myrunsmart/locations/-/instances/myrunsmart-default-rtdb 200
+[debug] [2023-07-17T13:35:49.291Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/myrunsmart/locations/-/instances/myrunsmart-default-rtdb {"name":"projects/746845981121/locations/asia-southeast1/instances/myrunsmart-default-rtdb","project":"projects/746845981121","databaseUrl":"https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-07-17T13:35:49.292Z] >>> [apiv2][query] PUT https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 
+[debug] [2023-07-17T13:35:49.292Z] >>> [apiv2][body] PUT https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json "{\n  \"rules\": {\n    \".read\": true,\n    \".write\": true\n  }\n}"
+[debug] [2023-07-17T13:35:50.463Z] <<< [apiv2][status] PUT https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2023-07-17T13:35:50.463Z] <<< [apiv2][body] PUT https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json {"status":"ok"}
+[info] +  database: rules for database myrunsmart-default-rtdb released successfully 
+[debug] [2023-07-17T13:35:50.466Z] [rules] releasing firebase.storage/myrunsmart.appspot.com with ruleset projects/myrunsmart/rulesets/82a8ab27-e6a5-4138-b59b-3241ee424396
+[debug] [2023-07-17T13:35:50.467Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/myrunsmart/releases/firebase.storage/myrunsmart.appspot.com [none]
+[debug] [2023-07-17T13:35:50.467Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/myrunsmart/releases/firebase.storage/myrunsmart.appspot.com {"release":{"name":"projects/myrunsmart/releases/firebase.storage/myrunsmart.appspot.com","rulesetName":"projects/myrunsmart/rulesets/82a8ab27-e6a5-4138-b59b-3241ee424396"}}
+[debug] [2023-07-17T13:35:51.846Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/myrunsmart/releases/firebase.storage/myrunsmart.appspot.com 200
+[debug] [2023-07-17T13:35:51.846Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/myrunsmart/releases/firebase.storage/myrunsmart.appspot.com {"name":"projects/myrunsmart/releases/firebase.storage/myrunsmart.appspot.com","rulesetName":"projects/myrunsmart/rulesets/82a8ab27-e6a5-4138-b59b-3241ee424396","createTime":"2023-07-07T17:17:18.155387Z","updateTime":"2023-07-17T13:35:51.634603Z"}
+[debug] [2023-07-17T13:35:51.846Z] [rules] updated release projects/myrunsmart/releases/firebase.storage/myrunsmart.appspot.com
+[info] +  storage: released rules storage.rules to firebase.storage 
+[info] i  functions: creating Node.js 18 (1st Gen) function index:sendNotificationToAdmin(us-central1)... 
+[debug] [2023-07-17T13:35:51.853Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/myrunsmart/locations/us-central1/functions [none]
+[debug] [2023-07-17T13:35:51.853Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/myrunsmart/locations/us-central1/functions {"name":"projects/myrunsmart/locations/us-central1/functions/sendNotificationToAdmin","sourceUploadUrl":"https://storage.googleapis.com/uploads-284147357470.us-central1.cloudfunctions.appspot.com/e8da2ce2-a8dc-4956-b7fd-d5ca56ec3abf.zip?GoogleAccessId=service-746845981121@gcf-admin-robot.iam.gserviceaccount.com&Expires=1689602745&Signature=G%2FHSQ6GFioCdovCj1Fi7%2BhvIDUrXSGh6UAdTLf1EDElT%2BabkSwz3dj7%2FGNi2bIusLybdN2IylXk0WQXVZwHLDUCIjSkZvA17Z%2FUsho4xSdIxMTE6GAsoUfwuKTmUnxtgafzR86JtR3KH78tjQRKe8Hh1jm%2BlbU0Gk563ey7Z33GyA86%2FU5zRKiimu2ws%2B4TG9wMWVaEBhp%2FUR8TzZ5JOZqd3SMfbZUC7IARBl3GyGdsyZ4Mw8imrXRA9ghhIHsanfCtJjCOQMw9ubrAU%2FfbhQKmwTgKOMs4YZrLBTljdIYP8%2FTR5CxVCBbgIQwEejnL20yWKw4RdsO5zYMc9swIVfg%3D%3D","entryPoint":"sendNotificationToAdmin","runtime":"nodejs18","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"index","firebase-functions-hash":"b12f03c9fe38658e1b2953824820eb985ed05ff7"},"eventTrigger":{"eventType":"providers/google.firebase.database/eventTypes/ref.create","resource":"projects/_/instances/myrunsmart-default-rtdb/refs/users/{usersId}"},"minInstances":null,"maxInstances":null,"ingressSettings":null,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"myrunsmart\",\"databaseURL\":\"https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app\",\"storageBucket\":\"myrunsmart.appspot.com\",\"locationId\":\"asia-east2\"}","GCLOUD_PROJECT":"myrunsmart","EVENTARC_CLOUD_EVENT_SOURCE":"projects/myrunsmart/locations/us-central1/functions/sendNotificationToAdmin"},"serviceAccountEmail":null,"availableMemoryMb":null,"timeout":null,"vpcConnector":null,"vpcConnectorEgressSettings":null,"buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}}
+[debug] [2023-07-17T13:35:52.625Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/myrunsmart/locations/us-central1/functions 403
+[debug] [2023-07-17T13:35:52.625Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/myrunsmart/locations/us-central1/functions {"error":{"code":403,"message":"Unable to retrieve the repository metadata for projects/myrunsmart/locations/us-central1/repositories/gcf-artifacts. Ensure that the Cloud Functions service account has 'artifactregistry.repositories.list' and 'artifactregistry.repositories.get' permissions. You can add the permissions by granting the role 'roles/artifactregistry.reader'.","status":"PERMISSION_DENIED"}}
+[warn] !  functions: failed to create function projects/myrunsmart/locations/us-central1/functions/sendNotificationToAdmin 
+[error] Failed to create function projects/myrunsmart/locations/us-central1/functions/sendNotificationToAdmin
+[debug] [2023-07-17T13:35:52.643Z] Total Function Deployment time: 788
+[debug] [2023-07-17T13:35:52.644Z] 1 Functions Deployed
+[debug] [2023-07-17T13:35:52.644Z] 1 Functions Errored
+[debug] [2023-07-17T13:35:52.644Z] 0 Function Deployments Aborted
+[debug] [2023-07-17T13:35:52.644Z] Average Function Deployment time: 787
+[info] 
+[info] Functions deploy had errors with the following functions:
+	index:sendNotificationToAdmin(us-central1)
+[info] i  functions: cleaning up build files... 
+[debug] [2023-07-17T13:35:53.167Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/myrunsmart/locations/us-central1/repositories/gcf-artifacts/packages/send_notification_to_admin [none]
+[debug] [2023-07-17T13:35:53.168Z] >>> [apiv2][query] GET https://us.gcr.io/v2/myrunsmart/gcf/us-central1/tags/list [none]
+[debug] [2023-07-17T13:35:54.462Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/myrunsmart/locations/us-central1/repositories/gcf-artifacts/packages/send_notification_to_admin 404
+[debug] [2023-07-17T13:35:54.462Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/myrunsmart/locations/us-central1/repositories/gcf-artifacts/packages/send_notification_to_admin {"error":{"code":404,"message":"Package \"projects/myrunsmart/locations/us-central1/repositories/gcf-artifacts/packages/send_notification_to_admin\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-07-17T13:35:55.346Z] <<< [apiv2][status] GET https://us.gcr.io/v2/myrunsmart/gcf/us-central1/tags/list 200
+[debug] [2023-07-17T13:35:55.346Z] <<< [apiv2][body] GET https://us.gcr.io/v2/myrunsmart/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"myrunsmart/gcf/us-central1","tags":[]}
+[debug] [2023-07-17T13:35:55.347Z] Could not find image for function projects/myrunsmart/locations/us-central1/functions/sendNotificationToAdmin
+[debug] [2023-07-17T13:35:55.347Z] Functions deploy failed.
+[debug] [2023-07-17T13:35:55.347Z] {
+  "endpoint": {
+    "id": "sendNotificationToAdmin",
+    "project": "myrunsmart",
+    "region": "us-central1",
+    "entryPoint": "sendNotificationToAdmin",
+    "platform": "gcfv1",
+    "runtime": "nodejs18",
+    "eventTrigger": {
+      "eventType": "providers/google.firebase.database/eventTypes/ref.create",
+      "retry": false,
+      "eventFilters": {
+        "resource": "projects/_/instances/myrunsmart-default-rtdb/refs/users/{usersId}"
+      }
+    },
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"myrunsmart\",\"databaseURL\":\"https://myrunsmart-default-rtdb.asia-southeast1.firebasedatabase.app\",\"storageBucket\":\"myrunsmart.appspot.com\",\"locationId\":\"asia-east2\"}",
+      "GCLOUD_PROJECT": "myrunsmart",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/myrunsmart/locations/us-central1/functions/sendNotificationToAdmin"
+    },
+    "codebase": "index",
+    "targetedByOnly": false,
+    "hash": "b12f03c9fe38658e1b2953824820eb985ed05ff7"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/myrunsmart/locations/us-central1/functions/sendNotificationToAdmin"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/myrunsmart/locations/us-central1/functions/sendNotificationToAdmin",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 403,
+            "message": "Unable to retrieve the repository metadata for projects/myrunsmart/locations/us-central1/repositories/gcf-artifacts. Ensure that the Cloud Functions service account has 'artifactregistry.repositories.list' and 'artifactregistry.repositories.get' permissions. You can add the permissions by granting the role 'roles/artifactregistry.reader'.",
+            "status": "PERMISSION_DENIED"
+          }
+        },
+        "response": {
+          "statusCode": 403
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 403, Unable to retrieve the repository metadata for projects/myrunsmart/locations/us-central1/repositories/gcf-artifacts. Ensure that the Cloud Functions service account has 'artifactregistry.repositories.list' and 'artifactregistry.repositories.get' permissions. You can add the permissions by granting the role 'roles/artifactregistry.reader'.",
+      "status": 403
+    },
+    "status": 403,
+    "code": 403
+  }
+}
+[debug] [2023-07-17T13:35:55.828Z] Error: Failed to create function sendNotificationToAdmin in region us-central1
+    at C:\Users\nosko\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:51:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV1Function (C:\Users\nosko\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:180:32)
+    at async Fabricator.createEndpoint (C:\Users\nosko\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:132:13)
+    at async handle (C:\Users\nosko\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:88:17)
+[error] 
+[error] Error: There was an error deploying functions

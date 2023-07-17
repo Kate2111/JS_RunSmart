@@ -42,7 +42,7 @@ async function cards(category, selector) {
                             </div>
                         </div>
                         <div class="catalog-item__subtitle">${this.subtitle}</div>
-                        <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                        <button class="catalog-item__link">ПОДРОБНЕЕ</button>
                     </div>
                     <div class="catalog-item__list">
                         <ul>
@@ -51,7 +51,7 @@ async function cards(category, selector) {
                             <li>${this.descr3}</li>
                             <li>${this.descr4}</li>
                         </ul>
-                        <a href="#" class="catalog-item__back">назад</a>
+                        <button class="catalog-item__back">назад</button>
                     </div>
                 </div>
                 <hr>
